@@ -265,10 +265,39 @@ export const INITIAL_BANKS = {
       { "zh-tw": "潤滑液與保險套", en: "Lubricant and condom" }
     ]
   },
+  city_name: {
+    label: { "zh-tw": "城市/國家", en: "City/Country" },
+    category: "location",
+    options: [
+      { "zh-tw": "京都", en: "Kyoto" },
+      { "zh-tw": "巴塞羅那", en: "Barcelona" },
+      { "zh-tw": "墨西哥城", en: "Mexico City" },
+      { "zh-tw": "聖彼得堡", en: "St. Petersburg" },
+      { "zh-tw": "巴黎", en: "Paris" },
+      { "zh-tw": "倫敦", en: "London" },
+      { "zh-tw": "紐約", en: "New York" },
+      { "zh-tw": "東京", en: "Tokyo" }
+    ]
+  },
+  art_tool: {
+    label: { "zh-tw": "繪畫工具", en: "Art Tool" },
+    category: "item",
+    options: [
+      { "zh-tw": "毛筆", en: "Ink Brush" },
+      { "zh-tw": "畫筆", en: "Paintbrush" },
+      { "zh-tw": "調色刀", en: "Palette Knife" },
+      { "zh-tw": "觸控筆", en: "Stylus" },
+      { "zh-tw": "傳統和紙畫筆", en: "Traditional Washi Brush" }
+    ]
+  },
   art_style: {
     label: { "zh-tw": "畫風", en: "Art Style" },
     category: "visual",
     options: [
+      { "zh-tw": "浮世繪 (Ukiyo-e)", en: "Ukiyo-e" },
+      { "zh-tw": "畢加索立體主義 (Cubism)", en: "Cubism" },
+      { "zh-tw": "弗裡達超現實主義 (Surrealism)", en: "Surrealism" },
+      { "zh-tw": "列賓現實主義 (Realism)", en: "Realism" },
       { "zh-tw": "高品質的 2D 插畫風格", en: "High-quality 2D illustration style" },
       { "zh-tw": "寫實厚塗風格", en: "Realistic impasto style" },
       { "zh-tw": "賽博龐克霓虹風格", en: "Cyberpunk neon style" },
@@ -377,6 +406,39 @@ export const INITIAL_BANKS = {
       { "zh-tw": "任天堂（Nintendo）", en: "Nintendo" },
       { "zh-tw": "SONY", en: "SONY" },
       { "zh-tw": "宜家（IKEA）", en: "IKEA" }
+    ]
+  },
+  dominant_colors: {
+    label: { "zh-tw": "主色調", en: "Dominant Colors" },
+    category: "visual",
+    options: [
+      { "zh-tw": "傳統的京都紅與古樸的墨黑色", en: "Traditional Kyoto red and antique ink black" },
+      { "zh-tw": "地中海藍與陽光金", en: "Mediterranean blue and sunny gold" },
+      { "zh-tw": "鮮豔的仙人掌綠與深紅色", en: "Vibrant cactus green and deep red" },
+      { "zh-tw": "冷峻的極光藍與雪白色", en: "Cool aurora blue and snow white" },
+      { "zh-tw": "莫蘭迪色系", en: "Morandi tones" },
+      { "zh-tw": "進階灰與極簡白", en: "High-end gray and minimalist white" }
+    ]
+  },
+  background_color_clean: {
+    label: { "zh-tw": "背景色", en: "Background Color" },
+    category: "visual",
+    options: [
+      { "zh-tw": "純白", en: "Pure White" },
+      { "zh-tw": "明亮的天空藍", en: "Bright Sky Blue" },
+      { "zh-tw": "陽光般的淺黃色", en: "Sunny Light Yellow" },
+      { "zh-tw": "清爽的薄荷綠", en: "Refreshing Mint Green" },
+      { "zh-tw": "奶油色", en: "Cream Color" }
+    ]
+  },
+  city_glimpse_subtitle: {
+    label: { "zh-tw": "副標題內容", en: "Subtitle Content" },
+    category: "other",
+    options: [
+      { "zh-tw": "古韻悠長的千年古都", en: "The thousand-year-old ancient capital" },
+      { "zh-tw": "高迪的奇幻建築之城", en: "Gaudí's city of fantastic architecture" },
+      { "zh-tw": "色彩斑斕的藝術靈魂", en: "Vibrant soul of art" },
+      { "zh-tw": "北方的威尼斯，藝術的殿堂", en: "Venice of the North, the temple of art" }
     ]
   },
   ratio: {
@@ -534,6 +596,30 @@ export const INITIAL_BANKS = {
       { "zh-tw": "揮手致意", en: "Waving greeting" },
       { "zh-tw": "舞蹈姿勢", en: "Dance pose" },
       { "zh-tw": "比心手勢", en: "Heart gesture" }
+    ]
+  },
+  action_status: {
+    label: { "zh-tw": "行為狀態", en: "Action Status" },
+    category: "action",
+    options: [
+      { "zh-tw": "玩PS5", en: "playing PS5" },
+      { "zh-tw": "彈吉他", en: "playing the guitar" },
+      { "zh-tw": "在電腦前寫程式碼", en: "coding in front of a computer" },
+      { "zh-tw": "拿著香蕉在畫畫", en: "painting with a banana" },
+      { "zh-tw": "穿潛水腳蹼", en: "putting on diving fins" },
+      { "zh-tw": "正在調酒", en: "mixing a cocktail" },
+      { "zh-tw": "在看一本厚厚的舊書", en: "reading a thick old book" },
+      { "zh-tw": "在修剪巨大的室內綠植", en: "trimming a giant indoor plant" }
+    ]
+  },
+  draw_style: {
+    label: { "zh-tw": "繪畫風格", en: "Drawing Style" },
+    category: "visual",
+    options: [
+      { "zh-tw": "手繪漫畫風格", en: "Hand-drawn Manga Style" },
+      { "zh-tw": "Disney手繪草稿風格", en: "Disney Hand-drawn Sketch Style" },
+      { "zh-tw": "吉卜力手繪風格", en: "Ghibli Hand-drawn Style" },
+      { "zh-tw": "美式漫畫風格", en: "American Comic Style" }
     ]
   },
   fingernail_detail: {
@@ -820,6 +906,26 @@ export const INITIAL_BANKS = {
       { "zh-tw": "辦公：筆記本電腦、鍵盤軸體、滑鼠、手繪板", en: "Office: Laptop, keyboard switches, mouse, drawing tablet" }
     ]
   },
+  underwater_color: {
+    label: { "zh-tw": "水下色調", en: "Underwater Color" },
+    category: "location",
+    options: [
+      { "zh-tw": "深青色透明水下", en: "deep teal transparent underwater" },
+      { "zh-tw": "晶瑩剔透的淺藍色", en: "crystal clear light blue" },
+      { "zh-tw": "神秘的深海藍", en: "mysterious deep sea blue" },
+      { "zh-tw": "夢幻的翡翠綠", en: "dreamy emerald green" }
+    ]
+  },
+  creatures: {
+    label: { "zh-tw": "伴隨生物", en: "Creatures" },
+    category: "character",
+    options: [
+      { "zh-tw": "許多銀色小魚", en: "many small silver fish" },
+      { "zh-tw": "發光的水母", en: "glowing jellyfish" },
+      { "zh-tw": "五彩斑斕的熱帶魚", en: "colorful tropical fish" },
+      { "zh-tw": "巨大的藍鯨(背景)", en: "a giant blue whale in the background" }
+    ]
+  },
   luxury_hobby_items: {
     label: { "zh-tw": "個人愛好/奢華", en: "Hobby & Luxury" },
     category: "item",
@@ -905,5 +1011,14 @@ export const INITIAL_DEFAULTS = {
   fashion_parts: { "zh-tw": "風衣拆解：翻領、肩章、腰帶、袖口束帶、主衣身", en: "Trench coat: Lapel, epaulets, belt, cuffs, main body" },
   beauty_items: { "zh-tw": "彩妝：口紅（帶切面）、眼影盤、粉餅、腮紅刷", en: "Makeup: Lipstick (cut), eyeshadow palette, compact, blush brush" },
   digital_items: { "zh-tw": "手機拆解：手機殼、螢幕內容、攝像頭模組、主板元件", en: "Phone: Case, screen content, camera module, motherboard" },
-  luxury_hobby_items: { "zh-tw": "珠寶：項鍊、耳環、戒指（寶石帶色散效果）", en: "Jewelry: Necklace, earrings, ring (gemstone dispersion)" }
+  luxury_hobby_items: { "zh-tw": "珠寶：項鍊、耳環、戒指（寶石帶色散效果）", en: "Jewelry: Necklace, earrings, ring (gemstone dispersion)" },
+  underwater_color: { "zh-tw": "深青色透明水下", en: "deep teal transparent underwater" },
+  creatures: { "zh-tw": "許多銀色小魚", en: "many small silver fish" },
+  city_name: { "zh-tw": "京都", en: "Kyoto" },
+  art_tool: { "zh-tw": "毛筆", en: "Ink Brush" },
+  dominant_colors: { "zh-tw": "傳統的京都紅與古樸的墨黑色", en: "Traditional Kyoto red and antique ink black" },
+  background_color_clean: { "zh-tw": "純白", en: "Pure White" },
+  city_glimpse_subtitle: { "zh-tw": "古韻悠長的千年古都", en: "The thousand-year-old ancient capital" },
+  action_status: { "zh-tw": "玩PS5", en: "playing PS5" },
+  draw_style: { "zh-tw": "手繪漫畫風格", en: "Hand-drawn Manga Style" }
 };
