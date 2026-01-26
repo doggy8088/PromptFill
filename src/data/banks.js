@@ -18,7 +18,8 @@ export const INITIAL_BANKS = {
       { "zh-tw": "遊戲與動漫概念美術設計大師", en: "Master of Game and Anime Concept Art" },
       { "zh-tw": "資深影視角色原畫師", en: "Senior Film Character Concept Artist" },
       { "zh-tw": "賽博龐克風格設計師", en: "Cyberpunk Style Designer" },
-      { "zh-tw": "暗黑幻想風格插畫師", en: "Dark Fantasy Style Illustrator" }
+      { "zh-tw": "暗黑幻想風格插畫師", en: "Dark Fantasy Style Illustrator" },
+      { "zh-tw": "美術攝影與電影寫實風格", en: "Fine-art photography blended with cinematic realism" }
     ]
   },
   subject: {
@@ -29,7 +30,20 @@ export const INITIAL_BANKS = {
       { "zh-tw": "男性角色", en: "Male Character" },
       { "zh-tw": "機甲少女", en: "Mecha Girl" },
       { "zh-tw": "怪物擬人化", en: "Monster Anthropomorphism" },
-      { "zh-tw": "奇幻種族(精靈/惡魔)", en: "Fantasy Race (Elf/Demon)" }
+      { "zh-tw": "奇幻種族(精靈/惡魔)", en: "Fantasy Race (Elf/Demon)" },
+      { "zh-tw": "女性，約20歲", en: "Female, around 20 years old" },
+      { "zh-tw": "年輕韓國女團偶像", en: "Young Korean female K-pop idol" }
+    ]
+  },
+  hair_style: {
+    label: { "zh-tw": "髮型樣式", en: "Hair Style" },
+    category: "character",
+    options: [
+      { "zh-tw": "短髮，柔和凌亂的深色頭髮", en: "Short, softly tousled dark hair" },
+      { "zh-tw": "深色波浪長髮", en: "Dark wavy long hair" },
+      { "zh-tw": "黑色直髮，垂在肩上", en: "Black straight hair, falling over shoulders" },
+      { "zh-tw": "淺金色捲髮", en: "Light blonde curly hair" },
+      { "zh-tw": "高馬尾辮", en: "High ponytail" }
     ]
   },
   character_companion: {
@@ -98,7 +112,10 @@ export const INITIAL_BANKS = {
       { "zh-tw": "斜角拍攝的原始人像", en: "Raw portrait from an angle" },
       { "zh-tw": "雙手置於鎖骨附近的特寫", en: "Close-up with hands near collarbones" },
       { "zh-tw": "坐姿半身側面照", en: "Seated half-body profile shot" },
-      { "zh-tw": "側面微距照", en: "Side macro shot" }
+      { "zh-tw": "側面微距照", en: "Side macro shot" },
+      { "zh-tw": "上半身特寫", en: "upper-body close-up" },
+      { "zh-tw": "平視、略微隱藏的中景鏡頭", en: "eye-level, slightly hidden intimate medium shot" },
+      { "zh-tw": "腰部以上的美術肖像", en: "Waist-up fine-art portrait" }
     ]
   },
   connectors: {
@@ -118,7 +135,8 @@ export const INITIAL_BANKS = {
       { "zh-tw": "成套的蕾絲內衣褲", en: "Matching lace lingerie set" },
       { "zh-tw": "運動風格純棉內衣", en: "Athletic style cotton underwear" },
       { "zh-tw": "極簡主義絲綢內衣", en: "Minimalist silk lingerie" },
-      { "zh-tw": "哥德風格綁帶內衣", en: "Gothic style strappy lingerie" }
+      { "zh-tw": "哥德風格綁帶內衣", en: "Gothic style strappy lingerie" },
+      { "zh-tw": "“純欲風”服飾", en: "'pure-seductive' outfit style" }
     ]
   },
   clothing: {
@@ -129,7 +147,19 @@ export const INITIAL_BANKS = {
       { "zh-tw": "白色絲綢襯衫", en: "White silk shirt" },
       { "zh-tw": "黑色修身西裝", en: "Black slim-fit suit" },
       { "zh-tw": "戰術機能風外套", en: "Tactical techwear jacket" },
-      { "zh-tw": "復古碎花連衣裙", en: "Vintage floral print dress" }
+      { "zh-tw": "復古碎花連衣裙", en: "Vintage floral print dress" },
+      { "zh-tw": "略顯成熟的“大姐姐”時尚風格", en: "Slightly mature 'onee-san' fashion style" },
+      { "zh-tw": "柔和青色復古碎花連衣裙", en: "Muted teal floral dress with subtle vintage patterns" }
+    ]
+  },
+  accessory_glasses: {
+    label: { "zh-tw": "眼鏡配飾", en: "Glasses" },
+    category: "item",
+    options: [
+      { "zh-tw": "戴著有輕微鏡面反射的眼鏡", en: "wearing glasses with mild lens reflections" },
+      { "zh-tw": "戴著時尚的太陽鏡", en: "wearing stylish sunglasses" },
+      { "zh-tw": "戴著黑框近視眼鏡", en: "wearing black-rimmed glasses" },
+      { "zh-tw": "不戴眼鏡", en: "no glasses" }
     ]
   },
   clothing_male: {
@@ -153,7 +183,8 @@ export const INITIAL_BANKS = {
       { "zh-tw": "機車皮衣與短裙", en: "Biker leather jacket and short skirt" },
       { "zh-tw": "白色蕾絲襯衫", en: "White lace blouse" },
       { "zh-tw": "黑色緊身連體衣", en: "Black tight bodysuit" },
-      { "zh-tw": "優雅的香奈兒風套裝", en: "Elegant Chanel-style suit" }
+      { "zh-tw": "優雅的香奈兒風套裝", en: "Elegant Chanel-style suit" },
+      { "zh-tw": "半脫的灰色大號連帽衫，露出白色吊帶", en: "half-removed oversized grey hoodie, revealing white camisole" }
     ]
   },
   expressions: {
@@ -265,10 +296,39 @@ export const INITIAL_BANKS = {
       { "zh-tw": "潤滑液與保險套", en: "Lubricant and condom" }
     ]
   },
+  city_name: {
+    label: { "zh-tw": "城市/國家", en: "City/Country" },
+    category: "location",
+    options: [
+      { "zh-tw": "京都", en: "Kyoto" },
+      { "zh-tw": "巴塞羅那", en: "Barcelona" },
+      { "zh-tw": "墨西哥城", en: "Mexico City" },
+      { "zh-tw": "聖彼得堡", en: "St. Petersburg" },
+      { "zh-tw": "巴黎", en: "Paris" },
+      { "zh-tw": "倫敦", en: "London" },
+      { "zh-tw": "紐約", en: "New York" },
+      { "zh-tw": "東京", en: "Tokyo" }
+    ]
+  },
+  art_tool: {
+    label: { "zh-tw": "繪畫工具", en: "Art Tool" },
+    category: "item",
+    options: [
+      { "zh-tw": "毛筆", en: "Ink Brush" },
+      { "zh-tw": "畫筆", en: "Paintbrush" },
+      { "zh-tw": "調色刀", en: "Palette Knife" },
+      { "zh-tw": "觸控筆", en: "Stylus" },
+      { "zh-tw": "傳統和紙畫筆", en: "Traditional Washi Brush" }
+    ]
+  },
   art_style: {
     label: { "zh-tw": "畫風", en: "Art Style" },
     category: "visual",
     options: [
+      { "zh-tw": "浮世繪 (Ukiyo-e)", en: "Ukiyo-e" },
+      { "zh-tw": "畢加索立體主義 (Cubism)", en: "Cubism" },
+      { "zh-tw": "弗裡達超現實主義 (Surrealism)", en: "Surrealism" },
+      { "zh-tw": "列賓現實主義 (Realism)", en: "Realism" },
       { "zh-tw": "高品質的 2D 插畫風格", en: "High-quality 2D illustration style" },
       { "zh-tw": "寫實厚塗風格", en: "Realistic impasto style" },
       { "zh-tw": "賽博龐克霓虹風格", en: "Cyberpunk neon style" },
@@ -379,6 +439,39 @@ export const INITIAL_BANKS = {
       { "zh-tw": "宜家（IKEA）", en: "IKEA" }
     ]
   },
+  dominant_colors: {
+    label: { "zh-tw": "主色調", en: "Dominant Colors" },
+    category: "visual",
+    options: [
+      { "zh-tw": "傳統的京都紅與古樸的墨黑色", en: "Traditional Kyoto red and antique ink black" },
+      { "zh-tw": "地中海藍與陽光金", en: "Mediterranean blue and sunny gold" },
+      { "zh-tw": "鮮豔的仙人掌綠與深紅色", en: "Vibrant cactus green and deep red" },
+      { "zh-tw": "冷峻的極光藍與雪白色", en: "Cool aurora blue and snow white" },
+      { "zh-tw": "莫蘭迪色系", en: "Morandi tones" },
+      { "zh-tw": "進階灰與極簡白", en: "High-end gray and minimalist white" }
+    ]
+  },
+  background_color_clean: {
+    label: { "zh-tw": "背景色", en: "Background Color" },
+    category: "visual",
+    options: [
+      { "zh-tw": "純白", en: "Pure White" },
+      { "zh-tw": "明亮的天空藍", en: "Bright Sky Blue" },
+      { "zh-tw": "陽光般的淺黃色", en: "Sunny Light Yellow" },
+      { "zh-tw": "清爽的薄荷綠", en: "Refreshing Mint Green" },
+      { "zh-tw": "奶油色", en: "Cream Color" }
+    ]
+  },
+  city_glimpse_subtitle: {
+    label: { "zh-tw": "副標題內容", en: "Subtitle Content" },
+    category: "other",
+    options: [
+      { "zh-tw": "古韻悠長的千年古都", en: "The thousand-year-old ancient capital" },
+      { "zh-tw": "高迪的奇幻建築之城", en: "Gaudí's city of fantastic architecture" },
+      { "zh-tw": "色彩斑斕的藝術靈魂", en: "Vibrant soul of art" },
+      { "zh-tw": "北方的威尼斯，藝術的殿堂", en: "Venice of the North, the temple of art" }
+    ]
+  },
   ratio: {
     label: { "zh-tw": "畫幅比例", en: "Aspect Ratio" },
     category: "visual",
@@ -388,7 +481,8 @@ export const INITIAL_BANKS = {
       { "zh-tw": "1:1", en: "1:1 Square" },
       { "zh-tw": "4:3橫式構圖", en: "4:3 Horizontal" },
       { "zh-tw": "16:9橫式構圖", en: "16:9 Horizontal" },
-      { "zh-tw": "圓形畫幅", en: "Circular Aspect Ratio" }
+      { "zh-tw": "圓形畫幅", en: "Circular Aspect Ratio" },
+      { "zh-tw": "2:3直式構圖", en: "2:3 Vertical" }
     ]
   },
   // Fashion Template additions
@@ -439,7 +533,10 @@ export const INITIAL_BANKS = {
       { "zh-tw": "自然窗光", en: "Natural window light" },
       { "zh-tw": "倫勃朗光", en: "Rembrandt lighting" },
       { "zh-tw": "賽博龐克霓虹光", en: "Cyberpunk neon lighting" },
-      { "zh-tw": "影棚硬光", en: "Studio hard light" }
+      { "zh-tw": "影棚硬光", en: "Studio hard light" },
+      { "zh-tw": "隨意的肖像攝影，帶有日常快照氛圍", en: "Casual portrait photography with a daily snapshot vibe" },
+      { "zh-tw": "隱藏相機拍攝風格，Portra 400 膠片質感", en: "Hidden camera style, Portra 400 film grain aesthetic" },
+      { "zh-tw": "陰天下的柔和自然光", en: "Soft natural light under overcast sky" }
     ]
   },
   sticker_core: {
@@ -479,7 +576,10 @@ export const INITIAL_BANKS = {
       { "zh-tw": "俯瞰紐約市的復仇者大廈樓頂", en: "Rooftop of Avengers Tower overlooking New York City" },
       { "zh-tw": "廢棄的工業倉庫", en: "Abandoned industrial warehouse" },
       { "zh-tw": "熙熙攘攘的時代廣場", en: "Bustling Times Square" },
-      { "zh-tw": "外太空飛船內部", en: "Inside a space-age spaceship" }
+      { "zh-tw": "外太空飛船內部", en: "Inside a space-age spaceship" },
+      { "zh-tw": "昏暗、平凡的房間，身後有一面素牆", en: "Dark, ordinary room with a plain wall behind the subject" },
+      { "zh-tw": "昏暗舒適的後臺更衣室或私密宿舍", en: "dimly lit, cozy backstage dressing room or private dorm room" },
+      { "zh-tw": "盛開的鬱鬱蔥蔥的花園", en: "Lush garden in full bloom" }
     ]
   },
 
@@ -534,6 +634,33 @@ export const INITIAL_BANKS = {
       { "zh-tw": "揮手致意", en: "Waving greeting" },
       { "zh-tw": "舞蹈姿勢", en: "Dance pose" },
       { "zh-tw": "比心手勢", en: "Heart gesture" }
+    ]
+  },
+  action_status: {
+    label: { "zh-tw": "行為狀態", en: "Action Status" },
+    category: "action",
+    options: [
+      { "zh-tw": "玩PS5", en: "playing PS5" },
+      { "zh-tw": "彈吉他", en: "playing the guitar" },
+      { "zh-tw": "在電腦前寫程式碼", en: "coding in front of a computer" },
+      { "zh-tw": "拿著香蕉在畫畫", en: "painting with a banana" },
+      { "zh-tw": "穿潛水腳蹼", en: "putting on diving fins" },
+      { "zh-tw": "正在調酒", en: "mixing a cocktail" },
+      { "zh-tw": "在看一本厚厚的舊書", en: "reading a thick old book" },
+      { "zh-tw": "在修剪巨大的室內綠植", en: "trimming a giant indoor plant" },
+      { "zh-tw": "坐在沙發上，正隨意地玩著手機", en: "Sitting on a sofa, casually playing on her phone" },
+      { "zh-tw": "換衣時驚訝地抬頭直視鏡頭", en: "frozen in surprise, looking directly into the lens while changing" },
+      { "zh-tw": "溫柔地凝視著鏡頭，帶著淡淡的憂鬱", en: "Looking gently toward the camera, with a touch of melancholy" }
+    ]
+  },
+  draw_style: {
+    label: { "zh-tw": "繪畫風格", en: "Drawing Style" },
+    category: "visual",
+    options: [
+      { "zh-tw": "手繪漫畫風格", en: "Hand-drawn Manga Style" },
+      { "zh-tw": "Disney手繪草稿風格", en: "Disney Hand-drawn Sketch Style" },
+      { "zh-tw": "吉卜力手繪風格", en: "Ghibli Hand-drawn Style" },
+      { "zh-tw": "美式漫畫風格", en: "American Comic Style" }
     ]
   },
   fingernail_detail: {
@@ -756,7 +883,8 @@ export const INITIAL_BANKS = {
       { "zh-tw": "淡粉色牡丹", en: "Pale pink peonies" },
       { "zh-tw": "名貴的深色蘭花", en: "Exotic dark orchids" },
       { "zh-tw": "乾枯的桉樹葉", en: "Dried eucalyptus leaves" },
-      { "zh-tw": "鮮豔的向日葵", en: "Vibrant sunflowers" }
+      { "zh-tw": "鮮豔的向日葵", en: "Vibrant sunflowers" },
+      { "zh-tw": "白色和淡桃色花瓣在空中飄落", en: "White and pale peach flower petals drifting through the air" }
     ]
   },
   character_type_pixar: {
@@ -820,6 +948,26 @@ export const INITIAL_BANKS = {
       { "zh-tw": "辦公：筆記本電腦、鍵盤軸體、滑鼠、手繪板", en: "Office: Laptop, keyboard switches, mouse, drawing tablet" }
     ]
   },
+  underwater_color: {
+    label: { "zh-tw": "水下色調", en: "Underwater Color" },
+    category: "location",
+    options: [
+      { "zh-tw": "深青色透明水下", en: "deep teal transparent underwater" },
+      { "zh-tw": "晶瑩剔透的淺藍色", en: "crystal clear light blue" },
+      { "zh-tw": "神秘的深海藍", en: "mysterious deep sea blue" },
+      { "zh-tw": "夢幻的翡翠綠", en: "dreamy emerald green" }
+    ]
+  },
+  creatures: {
+    label: { "zh-tw": "伴隨生物", en: "Creatures" },
+    category: "character",
+    options: [
+      { "zh-tw": "許多銀色小魚", en: "many small silver fish" },
+      { "zh-tw": "發光的水母", en: "glowing jellyfish" },
+      { "zh-tw": "五彩斑斕的熱帶魚", en: "colorful tropical fish" },
+      { "zh-tw": "巨大的藍鯨(背景)", en: "a giant blue whale in the background" }
+    ]
+  },
   luxury_hobby_items: {
     label: { "zh-tw": "個人愛好/奢華", en: "Hobby & Luxury" },
     category: "item",
@@ -828,6 +976,691 @@ export const INITIAL_BANKS = {
       { "zh-tw": "藝術：畫筆、調色盤、素描本、顏料軟管", en: "Art: Brushes, palette, sketchbook, paint tubes" },
       { "zh-tw": "生活：咖啡機、磨豆機、高檔手辦元件、限量書籍", en: "Life: Coffee machine, grinder, high-end figure parts, limited books" },
       { "zh-tw": "運動：網球拍、滑板、滑雪鏡、運動相機、水壺", en: "Sports: Tennis racket, skateboard, ski goggles, action cam, bottle" }
+    ]
+  },
+  // 新年海報相關詞庫
+  clothing_style_chinese: {
+    label: { "zh-tw": "中式服飾風格", en: "Chinese Clothing Style" },
+    category: "item",
+    options: [
+      { "zh-tw": "傳統暗紅色中式長袍", en: "Traditional dark red Chinese robe" },
+      { "zh-tw": "古典紅色漢服", en: "Classical red Hanfu" },
+      { "zh-tw": "傳統金色龍袍", en: "Traditional golden dragon robe" },
+      { "zh-tw": "深紫色唐裝", en: "Deep purple Tang suit" },
+      { "zh-tw": "寶藍色旗袍", en: "Sapphire blue Qipao" },
+      { "zh-tw": "墨綠色傳統長衫", en: "Dark green traditional long gown" },
+      { "zh-tw": "硃紅色將軍戰袍", en: "Vermilion general's battle robe" },
+      { "zh-tw": "紫金色錦緞華服", en: "Purple-gold brocade noble attire" }
+    ]
+  },
+  clothing_color_traditional: {
+    label: { "zh-tw": "傳統服裝顏色", en: "Traditional Clothing Color" },
+    category: "visual",
+    options: [
+      { "zh-tw": "暗紅色", en: "Dark Red" },
+      { "zh-tw": "硃紅色", en: "Vermilion" },
+      { "zh-tw": "寶藍色", en: "Sapphire Blue" },
+      { "zh-tw": "金黃色", en: "Golden Yellow" },
+      { "zh-tw": "紫金色", en: "Purple Gold" },
+      { "zh-tw": "墨綠色", en: "Dark Green" },
+      { "zh-tw": "深紫色", en: "Deep Purple" },
+      { "zh-tw": "玄黑色", en: "Mystic Black" }
+    ]
+  },
+  year_number: {
+    label: { "zh-tw": "年份", en: "Year" },
+    category: "other",
+    options: [
+      { "zh-tw": "2025", en: "2025" },
+      { "zh-tw": "2026", en: "2026" },
+      { "zh-tw": "2027", en: "2027" },
+      { "zh-tw": "2028", en: "2028" },
+      { "zh-tw": "2029", en: "2029" },
+      { "zh-tw": "2030", en: "2030" }
+    ]
+  },
+  greeting_new_year: {
+    label: { "zh-tw": "新年祝福語", en: "New Year Greeting" },
+    category: "other",
+    options: [
+      { "zh-tw": "馬到成功", en: "Immediate Success" },
+      { "zh-tw": "龍馬精神", en: "Vigorous Spirit" },
+      { "zh-tw": "馬不停蹄", en: "Unremitting Efforts" },
+      { "zh-tw": "一馬當先", en: "Take the Lead" },
+      { "zh-tw": "龍騰虎躍", en: "Dragon Soaring and Tiger Leaping" },
+      { "zh-tw": "新年快樂", en: "Happy New Year" },
+      { "zh-tw": "萬事如意", en: "May All Go Well" },
+      { "zh-tw": "恭喜發財", en: "Wishing You Prosperity" }
+    ]
+  },
+  background_color_festive: {
+    label: { "zh-tw": "節日背景顏色", en: "Festive Background Color" },
+    category: "visual",
+    options: [
+      { "zh-tw": "紅色背景", en: "Red background" },
+      { "zh-tw": "金色背景", en: "Gold background" },
+      { "zh-tw": "紅金漸變背景", en: "Red-gold gradient background" },
+      { "zh-tw": "深紅背景", en: "Deep red background" },
+      { "zh-tw": "硃紅背景", en: "Vermilion background" },
+      { "zh-tw": "暖橙紅背景", en: "Warm orange-red background" }
+    ]
+  },
+  character_heroic: {
+    label: { "zh-tw": "人物型別", en: "Character Type" },
+    category: "character",
+    options: [
+      { "zh-tw": "年輕學生", en: "Young Student" },
+      { "zh-tw": "都市白領", en: "Urban Professional" },
+      { "zh-tw": "文藝青年", en: "Artistic Youth" },
+      { "zh-tw": "普通上班族", en: "Office Worker" },
+      { "zh-tw": "威武將軍", en: "Mighty General" },
+      { "zh-tw": "英勇武者", en: "Brave Warrior" },
+      { "zh-tw": "傳奇英雄", en: "Legendary Hero" },
+      { "zh-tw": "武俠高手", en: "Martial Arts Master" }
+    ]
+  },
+  room_style_cute: {
+    label: { "zh-tw": "可愛房間風格", en: "Cute Room Style" },
+    category: "location",
+    options: [
+      { "zh-tw": "可愛粉色房間，粉彩床和牆壁，原創動物玩偶，妖精燈光，可愛海報，絨毛地毯", en: "Cute pink room, pastel pink bed and walls, original cute animal plushies, fairy lights, cute posters, fluffy rug" },
+      { "zh-tw": "簡約白色房間，白色傢俱，綠植，自然光，木質地板", en: "Minimalist white room, white furniture, plants, natural light, wooden floor" },
+      { "zh-tw": "復古粉色房間，復古傢俱，絲絨窗簾，古典裝飾，溫暖氛圍", en: "Vintage pink room, vintage furniture, velvet curtains, classic decor, warm atmosphere" },
+      { "zh-tw": "夢幻紫色房間，紫色床單，星星燈串，夢幻壁紙，柔軟地毯", en: "Dreamy purple room, purple sheets, star lights, dreamy wallpaper, soft carpet" },
+      { "zh-tw": "清新藍色房間，藍色床品，海洋裝飾，貝殼元素，清爽感覺", en: "Fresh blue room, blue bedding, ocean decor, shell elements, refreshing feel" },
+      { "zh-tw": "溫暖橙色房間，橙色傢俱，陽光充足，活力裝飾，舒適地毯", en: "Warm orange room, orange furniture, abundant sunlight, energetic decor, cozy rug" },
+      { "zh-tw": "北歐風格房間，灰色床品，簡約設計，自然材質，柔和燈光", en: "Nordic style room, grey bedding, minimalist design, natural materials, soft lighting" },
+      { "zh-tw": "日式和風房間，榻榻米，紙燈籠，竹子裝飾，禪意氛圍", en: "Japanese style room, tatami, paper lanterns, bamboo decor, zen atmosphere" }
+    ]
+  },
+  cute_outfit: {
+    label: { "zh-tw": "可愛服裝", en: "Cute Outfit" },
+    category: "item",
+    options: [
+      { "zh-tw": "黑色緊身吊帶連衣裙，長度到臀部，無袖，細肩帶", en: "Black tight camisole dress, hip-length, sleeveless, thin straps" },
+      { "zh-tw": "白色蕾絲連衣裙，及膝長度，短袖，優雅設計", en: "White lace dress, knee-length, short sleeves, elegant design" },
+      { "zh-tw": "粉色學院風制服，百褶裙，領結，長袖襯衫", en: "Pink school uniform, pleated skirt, bow tie, long-sleeved shirt" },
+      { "zh-tw": "藍色吊帶裙，A字型，及膝長度，夏天風格", en: "Blue spaghetti strap dress, A-line, knee-length, summer style" },
+      { "zh-tw": "紅色緊身連衣裙，高領，長袖，修身設計", en: "Red tight dress, high neck, long sleeves, slim-fit design" },
+      { "zh-tw": "黃色揹帶褲裙，可愛風格，短款，休閒設計", en: "Yellow overall dress, cute style, short length, casual design" },
+      { "zh-tw": "紫色睡裙，絲綢材質，吊帶，舒適款", en: "Purple nightgown, silk material, spaghetti straps, comfortable style" },
+      { "zh-tw": "格子圖案連衣裙，英倫風格，及膝，長袖", en: "Plaid dress, British style, knee-length, long sleeves" }
+    ]
+  },
+  cute_pose_dynamic: {
+    label: { "zh-tw": "可愛動態姿勢", en: "Cute Dynamic Pose" },
+    category: "action",
+    options: [
+      { "zh-tw": "向前走時回望，從正上方自信俏皮地俯視，迷人微笑", en: "Walking forward while looking back, confidently and playfully looking down from directly above, charming smile" },
+      { "zh-tw": "坐在床邊，雙腿交叉，手玩頭髮，溫柔微笑", en: "Sitting on bed edge, legs crossed, playing with hair, gentle smile" },
+      { "zh-tw": "站立姿勢，手放在臀部，自信直視鏡頭", en: "Standing pose, hands on hips, confidently looking at camera" },
+      { "zh-tw": "躺在床上，側身支撐頭部，俏皮表情", en: "Lying on bed, propping head with hand, playful expression" },
+      { "zh-tw": "跪坐姿勢，雙手放在膝蓋上，無辜表情", en: "Kneeling pose, hands on knees, innocent expression" },
+      { "zh-tw": "靠著牆站立，一隻腳抬起，酷酷的表情", en: "Leaning against wall, one foot raised, cool expression" },
+      { "zh-tw": "坐在地板上，雙腿伸直，看書，專注表情", en: "Sitting on floor, legs extended, reading book, focused expression" },
+      { "zh-tw": "跳躍姿勢，雙手舉起，快樂笑容，動態感", en: "Jumping pose, hands raised, happy smile, dynamic feel" }
+    ]
+  },
+  fitness_location: {
+    label: { "zh-tw": "健身場景", en: "Fitness Location" },
+    category: "location",
+    options: [
+      { "zh-tw": "繁忙的健身房，鏡子和器械隨處可見", en: "Busy gym with mirrors and equipment visible" },
+      { "zh-tw": "現代健身房，有氧區和力量區", en: "Modern gym with cardio and weight areas" },
+      { "zh-tw": "瑜伽教室，木地板和鏡子", en: "Yoga studio with wooden floor and mirrors" },
+      { "zh-tw": "家庭健身區，簡潔整潔", en: "Home workout area, clean and organized" },
+      { "zh-tw": "戶外跑步機平臺，城市天際線背景", en: "Outdoor treadmill platform with city skyline" }
+    ]
+  },
+  fitness_pose: {
+    label: { "zh-tw": "健身姿勢", en: "Fitness Pose" },
+    category: "action",
+    options: [
+      { "zh-tw": "半蹲姿勢，側身對鏡子", en: "Half-squat pose, turned sideways to mirror" },
+      { "zh-tw": "站立伸展，手臂高舉", en: "Standing stretch with arms raised" },
+      { "zh-tw": "平板支撐姿勢，側視鏡頭", en: "Plank pose, side view to camera" },
+      { "zh-tw": "弓步姿勢，肌肉緊繃", en: "Lunge pose, muscles tensed" },
+      { "zh-tw": "啞鈴推舉，專注表情", en: "Dumbbell press, focused expression" },
+      { "zh-tw": "瑜伽樹式姿勢，單腿站立", en: "Yoga tree pose, standing on one leg" },
+      { "zh-tw": "深蹲底部姿勢，大腿發力", en: "Bottom of squat position, leg muscles engaged" },
+      { "zh-tw": "壺鈴擺動，動態姿態", en: "Kettlebell swing, dynamic pose" }
+    ]
+  },
+  fitness_clothing: {
+    label: { "zh-tw": "健身服裝", en: "Fitness Clothing" },
+    category: "item",
+    options: [
+      { "zh-tw": "運動裙，緊身貼身", en: "Sports skirt, tight and form-fitting" },
+      { "zh-tw": "運動短褲和運動背心", en: "Athletic shorts and sports bra" },
+      { "zh-tw": "緊身瑜伽褲和運動上衣", en: "Tight yoga leggings and athletic top" },
+      { "zh-tw": "運動套裝，舒適透氣", en: "Athletic set, comfortable and breathable" },
+      { "zh-tw": "健身連衣裙，時尚運動風", en: "Fitness dress, sporty and stylish" },
+      { "zh-tw": "騎行短褲和運動內衣", en: "Cycling shorts and sports bra" },
+      { "zh-tw": "壓縮衣和運動長褲", en: "Compression shirt and athletic pants" },
+      { "zh-tw": "無袖運動背心和緊身褲", en: "Sleeveless sports tank and tight pants" }
+    ]
+  },
+  selfie_style: {
+    label: { "zh-tw": "自拍風格", en: "Selfie Style" },
+    category: "visual",
+    options: [
+      { "zh-tw": "原始真實的鏡子自拍", en: "Raw, authentic mirror selfie" },
+      { "zh-tw": "隨意的生活抓拍", en: "Candid daily life snapshot" },
+      { "zh-tw": "自然不做擺拍", en: "Natural, unposed shot" },
+      { "zh-tw": "日常生活氛圍", en: "Authentic daily life atmosphere" },
+      { "zh-tw": "真實記錄瞬間", en: "Genuine moment captured" }
+    ]
+  },
+  photo_effect: {
+    label: { "zh-tw": "拍照效果", en: "Photo Effect" },
+    category: "visual",
+    options: [
+      { "zh-tw": "機頂閃光燈直閃", en: "On-camera flash firing" },
+      { "zh-tw": "慢快門導致的運動模糊", en: "Motion blur from slow shutter speed" },
+      { "zh-tw": "明顯的膠片顆粒感", en: "Noticeable film grain" },
+      { "zh-tw": "自然光線柔和", en: "Soft natural lighting" },
+      { "zh-tw": "高對比度戲劇光影", en: "High contrast dramatic lighting" },
+      { "zh-tw": "輕微鏡頭眩光", en: "Slight lens flare" },
+      { "zh-tw": "淺景深背景虛化", en: "Shallow depth of field, background blur" },
+      { "zh-tw": "暗角效果", en: "Vignette effect" }
+    ]
+  },
+  physical_state: {
+    label: { "zh-tw": "身體狀態", en: "Physical State" },
+    category: "character",
+    options: [
+      { "zh-tw": "健康健美的身材", en: "Healthy athletic build" },
+      { "zh-tw": "身材苗條緊緻", en: "Slim and toned physique" },
+      { "zh-tw": "肌肉線條分明", en: "Defined muscle lines" },
+      { "zh-tw": "自然勻稱的體型", en: "Natural balanced physique" },
+      { "zh-tw": "柔韌靈活的身體", en: "Flexible and agile body" },
+      { "zh-tw": "力量感十足的肌肉", en: "Powerful muscular build" }
+    ]
+  },
+  sweat_appearance: {
+    label: { "zh-tw": "汗水狀態", en: "Sweat Appearance" },
+    category: "character",
+    options: [
+      { "zh-tw": "頭髮凌亂溼透，汗水明顯", en: "Hair disheveled and damp with sweat" },
+      { "zh-tw": "皮膚微微出汗，光澤感", en: "Skin slightly sweaty, glossy look" },
+      { "zh-tw": "汗珠掛在額頭和鼻尖", en: "Sweat beads on forehead and nose tip" },
+      { "zh-tw": "後背汗水浸溼衣物", en: "Back sweat soaking through clothes" },
+      { "zh-tw": "汗水順著臉頰流下", en: "Sweat streaming down cheeks" },
+      { "zh-tw": "輕微運動出汗痕跡", en: "Light exercise sweat traces" }
+    ]
+  },
+  facial_expression: {
+    label: { "zh-tw": "面部表情", en: "Facial Expression" },
+    category: "character",
+    options: [
+      { "zh-tw": "臉頰泛紅，眼神迷離", en: "Cheeks flushed red, dreamy and slightly unfocused eyes" },
+      { "zh-tw": "專注嚴肅的表情", en: "Focused and serious expression" },
+      { "zh-tw": "笑容自然燦爛", en: "Natural and bright smile" },
+      { "zh-tw": "咬牙堅持的神情", en: "Gritted teeth, determined look" },
+      { "zh-tw": "平靜放鬆的面容", en: "Calm and relaxed face" },
+      { "zh-tw": "眼神堅定有力", en: "Firm and powerful gaze" },
+      { "zh-tw": "運動後的滿足表情", en: "Post-exercise satisfied expression" },
+      { "zh-tw": "略帶疲憊但充滿成就感", en: "Slightly tired but accomplished look" }
+    ]
+  },
+  // ===== 微縮模型系列（新增） =====
+  miniature_character: {
+    label: { "zh-tw": "微縮人物角色", en: "Miniature Character" },
+    category: "character",
+    options: [
+      { "zh-tw": "消防員", en: "Firefighter" },
+      { "zh-tw": "短跑運動員", en: "Sprinter" },
+      { "zh-tw": "園丁", en: "Gardener" },
+      { "zh-tw": "廚師", en: "Chef" },
+      { "zh-tw": "建築工人", en: "Construction Worker" },
+      { "zh-tw": "醫生", en: "Doctor" },
+      { "zh-tw": "探險家", en: "Explorer" },
+      { "zh-tw": "騎士", en: "Knight" },
+      { "zh-tw": "忍者", en: "Ninja" },
+      { "zh-tw": "宇航員", en: "Astronaut" },
+      { "zh-tw": "警察", en: "Police Officer" },
+      { "zh-tw": "畫家", en: "Painter" }
+    ]
+  },
+  giant_object: {
+    label: { "zh-tw": "巨型日常物品", en: "Giant Everyday Object" },
+    category: "item",
+    options: [
+      { "zh-tw": "燃燒的火柴棍", en: "Burning Matchstick" },
+      { "zh-tw": "CD唱片", en: "CD Disc" },
+      { "zh-tw": "咖啡杯", en: "Coffee Mug" },
+      { "zh-tw": "鉛筆", en: "Pencil" },
+      { "zh-tw": "書本", en: "Book" },
+      { "zh-tw": "訂書機", en: "Stapler" },
+      { "zh-tw": "回形針", en: "Paperclip" },
+      { "zh-tw": "骰子", en: "Dice" },
+      { "zh-tw": "檯燈", en: "Desk Lamp" },
+      { "zh-tw": "鬧鐘", en: "Alarm Clock" },
+      { "zh-tw": "牙刷", en: "Toothbrush" },
+      { "zh-tw": "遙控器", en: "Remote Control" },
+      { "zh-tw": "橡皮擦", en: "Eraser" },
+      { "zh-tw": "網球", en: "Tennis Ball" },
+      { "zh-tw": "雞蛋", en: "Egg" }
+    ]
+  },
+  miniature_action: {
+    label: { "zh-tw": "微縮動作", en: "Miniature Action" },
+    category: "action",
+    options: [
+      { "zh-tw": "攀爬巨型物體", en: "Climbing the giant object" },
+      { "zh-tw": "奮力推開", en: "Pushing with great effort" },
+      { "zh-tw": "高舉過頭", en: "Lifting overhead" },
+      { "zh-tw": "跳躍躲避", en: "Jumping to dodge" },
+      { "zh-tw": "拉拽掙扎", en: "Pulling and struggling" },
+      { "zh-tw": "衝鋒撞擊", en: "Charging and colliding" },
+      { "zh-tw": "支撐抵抗", en: "Bracing and resisting" },
+      { "zh-tw": "滑下奔跑", en: "Sliding down and running" },
+      { "zh-tw": "跨越障礙", en: "Leaping over obstacle" },
+      { "zh-tw": "緊抱不放", en: "Holding on tight" },
+      { "zh-tw": "揮拳攻擊", en: "Punching" },
+      { "zh-tw": "蜷縮防禦", en: "Crouching defensively" }
+    ]
+  },
+  // ==================== Pop Mart Plush Toys Template ====================
+  plush_expression: {
+    label: { "zh-tw": "絨毛玩具表情", en: "Plush Toy Expression" },
+    category: "character",
+    options: [
+      { "zh-tw": "眨眼俏皮表情", en: "winking with playful expression" },
+      { "zh-tw": "張嘴大笑表情", en: "laughing out loud with open mouth" },
+      { "zh-tw": "驚訝表情", en: "shocked face" },
+      { "zh-tw": "睏倦表情", en: "sleepy face" },
+      { "zh-tw": "暴躁表情", en: "grumpy face" },
+      { "zh-tw": "吐舌頭表情", en: "tongue sticking out" },
+      { "zh-tw": "調皮微笑", en: "playful smirks" },
+      { "zh-tw": "無辜大眼表情", en: "innocent big eyes" },
+      { "zh-tw": "害羞臉紅表情", en: "shy blushing face" },
+      { "zh-tw": "呆萌茫然表情", en: "dazed confused expression" }
+    ]
+  },
+  cute_accessory: {
+    label: { "zh-tw": "可愛配飾", en: "Cute Accessory" },
+    category: "item",
+    options: [
+      { "zh-tw": "針織帽", en: "beanie hats" },
+      { "zh-tw": "耳機", en: "headphones" },
+      { "zh-tw": "派對錐形帽", en: "party cone hats" },
+      { "zh-tw": "唐朝傳統帽子", en: "traditional Tang dynasty hats" },
+      { "zh-tw": "滑雪鏡", en: "ski goggles" },
+      { "zh-tw": " funky star-shaped glasses", en: "funky star-shaped glasses" },
+      { "zh-tw": "厚圍巾", en: "thick scarves" },
+      { "zh-tw": "蝴蝶結", en: "bow ties" },
+      { "zh-tw": "手持幸運幣", en: "holding small lucky coins" },
+      { "zh-tw": "小皇冠", en: "small crowns" },
+      { "zh-tw": "蝴蝶結髮夾", en: "bow hair clips" },
+      { "zh-tw": "小鈴鐺項圈", en: "small bell collar" }
+    ]
+  },
+  festive_archway: {
+    label: { "zh-tw": "節日拱門場景", en: "Festive Archway Scene" },
+    category: "location",
+    options: [
+      { "zh-tw": "中國傳統拱門", en: "traditional Chinese archway" },
+      { "zh-tw": "春節紅燈籠拱門", en: "Chinese New Year red lantern archway" },
+      { "zh-tw": "金色裝飾拱門", en: "golden decorative archway" },
+      { "zh-tw": "櫻花拱門", en: "cherry blossom archway" },
+      { "zh-tw": "彩燈裝飾拱門", en: "festive light decorated archway" },
+      { "zh-tw": "復古雕花拱門", en: "vintage carved archway" },
+      { "zh-tw": "現代簡約拱門", en: "modern minimalist archway" },
+      { "zh-tw": "童話糖果拱門", en: "fairytale candy archway" }
+    ]
+  },
+  // ==================== 3D Isometric Diorama Template ====================
+  exhibition_type: {
+    label: { "zh-tw": "展覽型別", en: "Exhibition Type" },
+    category: "location",
+    options: [
+      { "zh-tw": "現代藝術展覽", en: "modern art exhibition" },
+      { "zh-tw": "產品設計展", en: "product design showcase" },
+      { "zh-tw": "博物館收藏展", en: "museum collection display" },
+      { "zh-tw": "科技創新展", en: "technology innovation exhibition" },
+      { "zh-tw": "時尚珠寶展", en: "fashion jewelry exhibition" },
+      { "zh-tw": "古董文物展", en: "antique artifacts exhibition" },
+      { "zh-tw": "玩具收藏展", en: "toy collection display" },
+      { "zh-tw": "植物園藝展", en: "botanical garden exhibition" },
+      { "zh-tw": "攝影作品展", en: "photography portfolio show" },
+      { "zh-tw": "概念設計展", en: "concept design exhibition" }
+    ]
+  },
+  display_objects: {
+    label: { "zh-tw": "展示物體", en: "Display Objects" },
+    category: "item",
+    options: [
+      { "zh-tw": "抽象雕塑和裝置藝術", en: "abstract sculptures and installation art" },
+      { "zh-tw": "電子產品原型和設備", en: "electronic product prototypes and gadgets" },
+      { "zh-tw": "古代文物和歷史遺物", en: "ancient artifacts and historical relics" },
+      { "zh-tw": "未來科技設備和機器人", en: "futuristic tech devices and robots" },
+      { "zh-tw": "精緻珠寶和寶石", en: "exquisite jewelry and gemstones" },
+      { "zh-tw": "限量版玩具和手辦", en: "limited edition toys and figurines" },
+      { "zh-tw": "多肉植物和盆景", en: "succulent plants and bonsai" },
+      { "zh-tw": "裝裱照片和藝術品", en: "framed photos and artwork" },
+      { "zh-tw": "概念汽車和交通工具", en: "concept cars and vehicles" },
+      { "zh-tw": "傢俱和家居設計", en: "furniture and home decor" }
+    ]
+  },
+  pod_structure: {
+    label: { "zh-tw": "展臺結構", en: "Pod Structure" },
+    category: "location",
+    options: [
+      { "zh-tw": "玻璃立方體展臺", en: "glass cube pod" },
+      { "zh-tw": "開放式圓形平臺", en: "open circular platform" },
+      { "zh-tw": "懸浮展示臺", en: "floating display podium" },
+      { "zh-tw": "多層階梯展架", en: "multi-tiered stepped display" },
+      { "zh-tw": "嵌入式壁龕展示", en: "recessed niche display" },
+      { "zh-tw": "透明圓柱體展櫃", en: "transparent cylindrical showcase" },
+      { "zh-tw": "L型轉角展臺", en: "L-shaped corner podium" },
+      { "zh-tw": "模組化組合展架", en: "modular interconnected display units" },
+      { "zh-tw": "旋轉展示臺", en: "rotating turntable display" },
+      { "zh-tw": "嵌入式地面展示窗", en: "recessed floor showcase window" }
+    ]
+  },
+  // ==================== Chinese Traditional Bridal Portrait Template ====================
+  bridal_hair_decoration: {
+    label: { "zh-tw": "新娘髮飾", en: "Bridal Hair Decoration" },
+    category: "item",
+    options: [
+      { "zh-tw": "紅色紙剪花和蝴蝶裝飾", en: "red paper-cut flowers and butterflies" },
+      { "zh-tw": "金色鳳冠和珍珠流蘇", en: "golden phoenix coronet with pearl tassels" },
+      { "zh-tw": "紅色絨花裝飾", en: "red velvet flower ornaments" },
+      { "zh-tw": "傳統銀飾髮簪", en: "traditional silver hairpins" },
+      { "zh-tw": "玉石髮釵和紅花", en: "jade hairpin with red flowers" },
+      { "zh-tw": "珍珠髮網和小巧皇冠", en: "pearl hair net with small crown" },
+      { "zh-tw": "紅色綢帶和鈴鐺", en: "red silk ribbons with bells" },
+      { "zh-tw": "梅花紙剪裝飾", en: "plum blossom paper-cut decorations" },
+      { "zh-tw": "金色步搖晃動髮飾", en: "golden buyao swaying hair ornament" },
+      { "zh-tw": "繡花髮帶和玉簪", en: "embroidered headband with jade hairpin" }
+    ]
+  },
+  traditional_bridal_attire: {
+    label: { "zh-tw": "傳統新娘服飾", en: "Traditional Bridal Attire" },
+    category: "item",
+    options: [
+      { "zh-tw": "紅色緞面旗袍", en: "red satin cheongsam" },
+      { "zh-tw": "紅色繡花裙褂", en: "red embroidered wedding gown" },
+      { "zh-tw": "傳統鳳冠霞帔", en: "traditional phoenix coronet and robe" },
+      { "zh-tw": "紅色漢服婚服", en: "red Hanfu wedding dress" },
+      { "zh-tw": "金色刺繡旗袍", en: "gold-embroidered cheongsam" },
+      { "zh-tw": "紅色龍鳳呈祥褂", en: "red dragon-phoenix auspicious gown" },
+      { "zh-tw": "錦緞旗袍配披肩", en: "brocade cheongsam with shawl" },
+      { "zh-tw": "傳統大紅喜服", en: "traditional grand red wedding attire" },
+      { "zh-tw": "紅色蕾絲邊旗袍", en: "red lace-trimmed cheongsam" },
+      { "zh-tw": "蘇繡旗袍禮服", en: "Suzhou embroidery cheongsam gown" }
+    ]
+  },
+  bridal_jewelry: {
+    label: { "zh-tw": "新娘首飾", en: "Bridal Jewelry" },
+    category: "item",
+    options: [
+      { "zh-tw": "白色珍珠首飾和小珍珠耳環", en: "white pearl jewelry and small pearl earrings" },
+      { "zh-tw": "黃金項鍊和耳環套裝", en: "gold necklace and earrings set" },
+      { "zh-tw": "玉石手鐲和吊墜", en: "jade bracelet and pendant" },
+      { "zh-tw": "紅寶石項鍊和耳飾", en: "ruby necklace and ear ornaments" },
+      { "zh-tw": "傳統銀飾手鐲和項鍊", en: "traditional silver bracelet and necklace" },
+      { "zh-tw": "珍珠項鍊和鑽石耳釘", en: "pearl necklace and diamond studs" },
+      { "zh-tw": "翡翠耳環和項鍊", en: "emerald earrings and necklace" },
+      { "zh-tw": "黃金鳳形胸針", en: "golden phoenix-shaped brooch" },
+      { "zh-tw": "珍珠髮飾和項鍊套裝", en: "pearl hair ornaments and necklace set" },
+      { "zh-tw": "紅珊瑚手串和耳墜", en: "red coral bracelet and drop earrings" }
+    ]
+  },
+  // ==================== Premium Food Advertising Template ====================
+  premium_food_subject: {
+    label: { "zh-tw": "高端食品主體", en: "Premium Food Subject" },
+    category: "item",
+    options: [
+      { "zh-tw": "手工巧克力球", en: "handcrafted chocolate truffles" },
+      { "zh-tw": "新鮮漿果塔", en: "fresh berry tartlets" },
+      { "zh-tw": "精緻馬卡龍", en: "delicate macarons" },
+      { "zh-tw": "日式和果子", en: "Japanese wagashi sweets" },
+      { "zh-tw": "手工冰淇淋球", en: "artisanal ice cream scoops" },
+      { "zh-tw": "精緻法式糕點", en: "elegant French pastries" },
+      { "zh-tw": "新鮮壽司拼盤", en: "fresh sushi platter" },
+      { "zh-tw": "手工意麵卷", en: "handmade pasta bundles" },
+      { "zh-tw": "精緻杯子蛋糕", en: "gourmet cupcakes" },
+      { "zh-tw": "新鮮牛油果片", en: "fresh avocado slices" },
+      { "zh-tw": "手工奶酪球", en: "artisanal cheese balls" },
+      { "zh-tw": "精緻水果塔", en: "elegant fruit tarts" }
+    ]
+  },
+  ingredient_bits: {
+    label: { "zh-tw": "配料碎屑裝飾", en: "Ingredient Bits" },
+    category: "item",
+    options: [
+      { "zh-tw": "可可粉和金箔碎屑", en: "cocoa powder and gold flakes" },
+      { "zh-tw": "新鮮薄荷葉和檸檬皮屑", en: "fresh mint leaves and lemon zest" },
+      { "zh-tw": "烤堅果碎和海鹽", en: "toasted nut crumbs and sea salt" },
+      { "zh-tw": "芝麻和蔥花碎", en: "sesame seeds and scallion bits" },
+      { "zh-tw": "抹茶粉和紅豆碎", en: "matcha powder and red bean bits" },
+      { "zh-tw": "香草籽和糖粉", en: "vanilla bean specks and powdered sugar" },
+      { "zh-tw": "辣椒粉和青檸碎", en: "chili powder and lime zest" },
+      { "zh-tw": "羅勒葉和帕爾馬乾酪碎", en: "basil leaves and parmesan crisps" },
+      { "zh-tw": "肉桂粉和橙皮屑", en: "cinnamon powder and orange zest" },
+      { "zh-tw": "椰絲和芒果碎", en: "shredded coconut and mango bits" },
+      { "zh-tw": "新鮮香草和橄欖油飛濺", en: "fresh herbs and olive oil splashes" },
+      { "zh-tw": "食用花卉和花粉", en: "edible flowers and pollen" }
+    ]
+  },
+  // ==================== Forbidden City Phoenix Portrait Template ====================
+  imperial_palace_scene: {
+    label: { "zh-tw": "皇家宮殿場景", en: "Imperial Palace Scene" },
+    category: "location",
+    options: [
+      { "zh-tw": "紫禁城雪夜，飛雪飄零", en: "Forbidden City snow night with falling snowflakes" },
+      { "zh-tw": "頤和園黃昏，夕陽餘暉", en: "Summer Palace at dusk with golden sunset" },
+      { "zh-tw": "天壇清晨，薄霧繚繞", en: "Temple of Heaven at dawn with misty atmosphere" },
+      { "zh-tw": "故宮午門，春節燈火", en: "Forbidden City Meridian Gate with festival lights" },
+      { "zh-tw": "圓明園遺址，月光灑落", en: "Old Summer Palace ruins under moonlight" },
+      { "zh-tw": "北海公園白塔，冬雪紛飛", en: "Beihai Park White Pagoda in winter snow" },
+      { "zh-tw": "天安門城樓，黎明曙光", en: "Tiananmen Gate at dawn break" },
+      { "zh-tw": "雍和宮，香火繚繞", en: "Yonghe Temple with incense smoke rising" },
+      { "zh-tw": "瀋陽故宮，秋葉飄落", en: "Shenyang Imperial Palace with autumn leaves" },
+      { "zh-tw": "承德避暑山莊，夏日荷花", en: "Chengde Mountain Resort with summer lotus" }
+    ]
+  },
+  phoenix_crown: {
+    label: { "zh-tw": "鳳冠髮飾", en: "Phoenix Crown" },
+    category: "item",
+    options: [
+      { "zh-tw": "華麗繁複的金鳳冠", en: "ornate golden phoenix crown" },
+      { "zh-tw": "珍珠點綴的鳳冠", en: "pearl-embellished phoenix crown" },
+      { "zh-tw": "紅寶石鳳凰髮釵", en: "ruby phoenix hairpin" },
+      { "zh-tw": "翡翠流蘇鳳冠", en: "jade tassel phoenix crown" },
+      { "zh-tw": "金龍戲珠髮飾", en: "golden dragon playing with pearl hairpiece" },
+      { "zh-tw": "綵鳳朝陽頭飾", en: "colorful phoenix facing sun headpiece" },
+      { "zh-tw": "寶石鑲嵌的鳳冠", en: "gemstone-encrusted phoenix crown" },
+      { "zh-tw": "金絲編織的鳳簪", en: "gold-woven phoenix hairpin" },
+      { "zh-tw": "珊瑚與珍珠鳳冠", en: "coral and pearl phoenix crown" },
+      { "zh-tw": "傳統步搖髮飾", en: "traditional buyao swaying hair ornament" }
+    ]
+  },
+  flowing_garment: {
+    label: { "zh-tw": "流動華服", en: "Flowing Garment" },
+    category: "item",
+    options: [
+      { "zh-tw": "流動的紅橙色絲綢華服", en: "flowing red-orange silk robes" },
+      { "zh-tw": "飄逸的紫色紗衣", en: "flowing purple silk gauze" },
+      { "zh-tw": "金色刺繡錦緞長袍", en: "gold-embroidered brocade robes" },
+      { "zh-tw": "紅色霞帔鳳冠霞帔", en: "red xiapei royal cape" },
+      { "zh-tw": "白色漢服仙氣飄飄", en: "white Hanfu with ethereal vibe" },
+      { "zh-tw": "藍色漸變雲紋華服", en: "blue gradient cloud-pattern robes" },
+      { "zh-tw": "粉色櫻花主題長裙", en: "pink cherry blossom themed gown" },
+      { "zh-tw": "綠色翡翠質感絲綢", en: "green jade-like silk robes" },
+      { "zh-tw": "黑色繡金龍紋長袍", en: "black dragon-embroidered robes" },
+      { "zh-tw": "彩色羽衣霓裳", en: "colorful feather rainbow gown" }
+    ]
+  },
+  festive_props: {
+    label: { "zh-tw": "節日道具", en: "Festive Props" },
+    category: "item",
+    options: [
+      { "zh-tw": "口中叼著中式紅包，手中拿著展開的春節祝福", en: "holding red envelope in mouth and unfolded spring festival blessing in hand" },
+      { "zh-tw": "手持燈籠，提著福字掛件", en: "holding lantern with Fu character ornament" },
+      { "zh-tw": "拿著春聯，提著鞭炮串", en: "holding spring couplet and firecracker string" },
+      { "zh-tw": "捧著元寶托盤，拿著金算盤", en: "holding gold ingot tray and golden abacus" },
+      { "zh-tw": "手提花燈，拿著梅花枝", en: "carrying flower lantern and plum blossom branch" },
+      { "zh-tw": "拿著福字牌，手捧如意", en: "holding Fu character plaque and jade ruyi scepter" },
+      { "zh-tw": "手持紅包袋，提著中國結", en: "holding red envelope bag and Chinese knot" },
+      { "zh-tw": "拿著糖葫蘆，提著餃子籃", en: "holding candied hawthorn and dumpling basket" },
+      { "zh-tw": "手捧酒杯，拿著梅花扇", en: "holding wine cup and plum blossom fan" },
+      { "zh-tw": "手持鞭炮，拿著福字窗花", en: "holding firecrackers and Fu character paper cutting" }
+    ]
+  },
+
+  // ==================== 室內設計詞庫 ====================
+
+  room_type: {
+    label: { "zh-tw": "室內空間型別", en: "Room Type" },
+    category: "location",
+    options: [
+      { "zh-tw": "客廳", en: "Living Room" },
+      { "zh-tw": "臥室", en: "Bedroom" },
+      { "zh-tw": "廚房", en: "Kitchen" },
+      { "zh-tw": "浴室", en: "Bathroom" },
+      { "zh-tw": "書房", en: "Study Room" },
+      { "zh-tw": "餐廳", en: "Dining Room" },
+      { "zh-tw": "辦公室", en: "Office" },
+      { "zh-tw": "陽臺", en: "Balcony" },
+      { "zh-tw": "娛樂室", en: "Entertainment Room" },
+      { "zh-tw": "衣帽間", en: "Walk-in Closet" }
+    ]
+  },
+
+  interior_design_style: {
+    label: { "zh-tw": "室內設計風格", en: "Interior Design Style" },
+    category: "visual",
+    options: [
+      { "zh-tw": "現代輕奢風格", en: "Modern Light Luxury Style" },
+      { "zh-tw": "北歐簡約風格", en: "Nordic Minimalist Style" },
+      { "zh-tw": "工業風格", en: "Industrial Style" },
+      { "zh-tw": "新中式風格", en: "New Chinese Style" },
+      { "zh-tw": "現代簡約風格", en: "Modern Minimalist Style" },
+      { "zh-tw": "美式鄉村風格", en: "American Country Style" },
+      { "zh-tw": "歐式古典風格", en: "European Classical Style" },
+      { "zh-tw": "日式和風風格", en: "Japanese Style" },
+      { "zh-tw": "波普藝術風格", en: "Pop Art Style" },
+      { "zh-tw": "復古懷舊風格", en: "Vintage Retro Style" },
+      { "zh-tw": "地中海風格", en: "Mediterranean Style" },
+      { "zh-tw": "極簡主義風格", en: "Minimalism Style" }
+    ]
+  },
+
+  furniture_set: {
+    label: { "zh-tw": "傢俱組合", en: "Furniture Set" },
+    category: "item",
+    options: [
+      { "zh-tw": "沙發、地毯、茶几、電視", en: "Sofa, rug, coffee table, TV" },
+      { "zh-tw": "雙人床、床頭櫃、檯燈、衣櫃", en: "Double bed, nightstand, lamp, wardrobe" },
+      { "zh-tw": "餐桌、餐椅、吊燈、餐具櫃", en: "Dining table, chairs, pendant light, sideboard" },
+      { "zh-tw": "辦公桌、辦公椅、書架、檯燈", en: "Desk, office chair, bookshelf, desk lamp" },
+      { "zh-tw": "沙發組合、茶几、電視櫃、落地燈", en: "Sofa set, coffee table, TV cabinet, floor lamp" },
+      { "zh-tw": "浴缸、洗手檯、馬桶、浴室櫃", en: "Bathtub, vanity, toilet, bathroom cabinet" },
+      { "zh-tw": "灶臺、櫥櫃、冰箱、餐桌", en: "Stove, cabinets, refrigerator, dining table" },
+      { "zh-tw": "懶人沙發、茶几、落地燈、書架", en: "Bean bag, coffee table, floor lamp, bookshelf" }
+    ]
+  },
+
+  ceiling_material: {
+    label: { "zh-tw": "天花板材質", en: "Ceiling Material" },
+    category: "visual",
+    options: [
+      { "zh-tw": "白色乳膠漆平頂", en: "White latex flat ceiling" },
+      { "zh-tw": "石膏線裝飾吊頂", en: "Gypsum molding decorative ceiling" },
+      { "zh-tw": "木質格柵吊頂", en: "Wooden grid ceiling" },
+      { "zh-tw": "簡約跌級吊頂", en: "Minimalist stepped ceiling" },
+      { "zh-tw": "金屬鋁扣板吊頂", en: "Metal aluminum ceiling" },
+      { "zh-tw": "原木色木質天花板", en: "Natural wood ceiling" },
+      { "zh-tw": "藝術塗料質感天花", en: "Artistic paint texture ceiling" },
+      { "zh-tw": "鏡面玻璃吊頂", en: "Mirrored glass ceiling" },
+      { "zh-tw": "布藝軟包吊頂", en: "Fabric upholstered ceiling" },
+      { "zh-tw": "裸露混凝土頂面", en: "Exposed concrete ceiling" }
+    ]
+  },
+
+  wall_material: {
+    label: { "zh-tw": "牆面材質", en: "Wall Material" },
+    category: "visual",
+    options: [
+      { "zh-tw": "白色乳膠漆牆面", en: "White latex paint wall" },
+      { "zh-tw": "暖白色牆面與裝飾畫", en: "Warm white walls with decorative art" },
+      { "zh-tw": "淺灰色藝術塗料", en: "Light gray artistic paint" },
+      { "zh-tw": "原木色木飾面板", en: "Natural wood veneer panel" },
+      { "zh-tw": "大理石紋理牆面", en: "Marble texture wall" },
+      { "zh-tw": "文化石裝飾牆", en: "Cultural stone decorative wall" },
+      { "zh-tw": "淺色木紋壁紙", en: "Light wood grain wallpaper" },
+      { "zh-tw": "淺灰色硅藻泥牆面", en: "Light gray diatom mud wall" },
+      { "zh-tw": "白色護牆板", en: "White wainscoting panel" },
+      { "zh-tw": "暖色瓷磚牆面", en: "Warm color ceramic tile wall" },
+      { "zh-tw": "裸露紅磚牆面", en: "Exposed red brick wall" }
+    ]
+  },
+
+  floor_material: {
+    label: { "zh-tw": "地板材質", en: "Floor Material" },
+    category: "visual",
+    options: [
+      { "zh-tw": "淺灰色大理石地磚", en: "Light gray marble tile" },
+      { "zh-tw": "淺灰色巖板地面", en: "Light gray sintered stone floor" },
+      { "zh-tw": "暖色實木複合地板", en: "Warm engineered wood flooring" },
+      { "zh-tw": "淺橡色強化地板", en: "Light oak laminate flooring" },
+      { "zh-tw": "深灰色大理石地面", en: "Dark gray marble floor" },
+      { "zh-tw": "原木色實木地板", en: "Natural wood solid floor" },
+      { "zh-tw": "米色拋光磚", en: "Beige polished tile" },
+      { "zh-tw": "淺灰色仿古磚", en: "Light gray antique brick tile" },
+      { "zh-tw": "深色地毯鋪地", en: "Dark carpet flooring" },
+      { "zh-tw": "水磨石地面", en: "Terrazzo flooring" },
+      { "zh-tw": "混凝土拋光地面", en: "Polished concrete floor" }
+    ]
+  },
+
+  interior_lighting: {
+    label: { "zh-tw": "室內光線效果", en: "Interior Lighting" },
+    category: "visual",
+    options: [
+      { "zh-tw": "自然光線", en: "Natural lighting" },
+      { "zh-tw": "暖色調柔和燈光", en: "Warm soft lighting" },
+      { "zh-tw": "冷色調明亮燈光", en: "Cool bright lighting" },
+      { "zh-tw": "專業建築攝影光線", en: "Professional architectural photography lighting" },
+      { "zh-tw": "側面窗戶自然光", en: "Side window natural light" },
+      { "zh-tw": "柔和漫射光線", en: "Soft diffused lighting" },
+      { "zh-tw": "戲劇性光影對比", en: "Dramatic light and shadow contrast" },
+      { "zh-tw": "黃金時刻陽光", en: "Golden hour sunlight" },
+      { "zh-tw": "多雲天柔和光線", en: "Overcast soft lighting" },
+      { "zh-tw": "夜晚溫馨燈光", en: "Cozy evening lighting" }
+    ]
+  },
+
+  render_quality: {
+    label: { "zh-tw": "渲染質量", en: "Render Quality" },
+    category: "other",
+    options: [
+      { "zh-tw": "4K超高清分辨率", en: "4K Ultra HD resolution" },
+      { "zh-tw": "8K超高清分辨率", en: "8K Ultra HD resolution" },
+      { "zh-tw": "照片級真實渲染", en: "Photorealistic rendering" },
+      { "zh-tw": "電影級渲染質量", en: "Cinematic rendering quality" },
+      { "zh-tw": "高清細節", en: "High definition details" },
+      { "zh-tw": "超精細紋理細節", en: "Ultra-fine texture details" },
+      { "zh-tw": "真實光影渲染", en: "Realistic lighting rendering" },
+      { "zh-tw": "專業建築渲染", en: "Professional architectural rendering" }
+    ]
+  },
+
+  room_condition: {
+    label: { "zh-tw": "房間狀態", en: "Room Condition" },
+    category: "location",
+    options: [
+      { "zh-tw": "精緻裝修，高檔材料的質感與細節", en: "Exquisitely decorated, high-end materials with refined details" },
+      { "zh-tw": "毛坯房，裸露的混凝土表面，未完工的狀態", en: "Unfinished rough room, exposed concrete surfaces, incomplete state" },
+      { "zh-tw": "髒亂破舊，雜亂的佈置與陳舊材質表達", en: "Dirty and dilapidated, cluttered layout with worn materials" },
+      { "zh-tw": "簡約整潔，現代都市風格", en: "Minimalist and tidy, modern urban style" },
+      { "zh-tw": "豪華高檔，奢華裝修與精緻裝飾", en: "Luxurious high-end, opulent decoration with exquisite ornaments" },
+      { "zh-tw": "溫馨舒適，充滿生活氣息", en: "Cozy and comfortable, full of life atmosphere" },
+      { "zh-tw": "工業風，裸露管線與原始材質", en: "Industrial style, exposed pipes and raw materials" },
+      { "zh-tw": "極簡主義，留白空間與極少裝飾", en: "Minimalist, negative space with minimal decoration" }
     ]
   }
 };
@@ -905,5 +1738,71 @@ export const INITIAL_DEFAULTS = {
   fashion_parts: { "zh-tw": "風衣拆解：翻領、肩章、腰帶、袖口束帶、主衣身", en: "Trench coat: Lapel, epaulets, belt, cuffs, main body" },
   beauty_items: { "zh-tw": "彩妝：口紅（帶切面）、眼影盤、粉餅、腮紅刷", en: "Makeup: Lipstick (cut), eyeshadow palette, compact, blush brush" },
   digital_items: { "zh-tw": "手機拆解：手機殼、螢幕內容、攝像頭模組、主板元件", en: "Phone: Case, screen content, camera module, motherboard" },
-  luxury_hobby_items: { "zh-tw": "珠寶：項鍊、耳環、戒指（寶石帶色散效果）", en: "Jewelry: Necklace, earrings, ring (gemstone dispersion)" }
+  luxury_hobby_items: { "zh-tw": "珠寶：項鍊、耳環、戒指（寶石帶色散效果）", en: "Jewelry: Necklace, earrings, ring (gemstone dispersion)" },
+  underwater_color: { "zh-tw": "深青色透明水下", en: "deep teal transparent underwater" },
+  creatures: { "zh-tw": "許多銀色小魚", en: "many small silver fish" },
+  city_name: { "zh-tw": "京都", en: "Kyoto" },
+  art_tool: { "zh-tw": "毛筆", en: "Ink Brush" },
+  dominant_colors: { "zh-tw": "傳統的京都紅與古樸的墨黑色", en: "Traditional Kyoto red and antique ink black" },
+  background_color_clean: { "zh-tw": "純白", en: "Pure White" },
+  city_glimpse_subtitle: { "zh-tw": "古韻悠長的千年古都", en: "The thousand-year-old ancient capital" },
+  action_status: { "zh-tw": "玩PS5", en: "playing PS5" },
+  draw_style: { "zh-tw": "手繪漫畫風格", en: "Hand-drawn Manga Style" },
+  hair_style: { "zh-tw": "短髮，柔和凌亂的深色頭髮", en: "Short, softly tousled dark hair" },
+  accessory_glasses: { "zh-tw": "戴著有輕微鏡面反射的眼鏡", en: "wearing glasses with mild lens reflections" },
+  // 新年海報預設值
+  clothing_style_chinese: { "zh-tw": "古典紅色漢服", en: "Classical red Hanfu" },
+  clothing_color_traditional: { "zh-tw": "暗紅色", en: "Dark Red" },
+  year_number: { "zh-tw": "2026", en: "2026" },
+  greeting_new_year: { "zh-tw": "馬到成功", en: "Immediate Success" },
+  background_color_festive: { "zh-tw": "紅色背景", en: "Red background" },
+  character_heroic: { "zh-tw": "文藝青年", en: "Artistic Youth" },
+  // 可愛動態姿勢預設值
+  room_style_cute: { "zh-tw": "可愛粉色房間，粉彩床和牆壁，原創動物玩偶，妖精燈光，可愛海報，絨毛地毯", en: "Cute pink room, pastel pink bed and walls, original cute animal plushies, fairy lights, cute posters, fluffy rug" },
+  cute_outfit: { "zh-tw": "黑色緊身吊帶連衣裙，長度到臀部，無袖，細肩帶", en: "Black tight camisole dress, hip-length, sleeveless, thin straps" },
+  cute_pose_dynamic: { "zh-tw": "向前走時回望，從正上方自信俏皮地俯視，迷人微笑", en: "Walking forward while looking back, confidently and playfully looking down from directly above, charming smile" },
+
+  // 健身自拍場景預設值
+  fitness_location: { "zh-tw": "繁忙的健身房，鏡子和器械隨處可見", en: "Busy gym with mirrors and equipment visible" },
+  fitness_pose: { "zh-tw": "半蹲姿勢，側身對鏡子", en: "Half-squat pose, turned sideways to mirror" },
+  fitness_clothing: { "zh-tw": "運動裙，緊身貼身", en: "Sports skirt, tight and form-fitting" },
+  selfie_style: { "zh-tw": "原始真實的鏡子自拍", en: "Raw, authentic mirror selfie" },
+  photo_effect: { "zh-tw": "機頂閃光燈直閃", en: "On-camera flash firing" },
+  physical_state: { "zh-tw": "健康健美的身材", en: "Healthy athletic build" },
+  sweat_appearance: { "zh-tw": "頭髮凌亂溼透，汗水明顯", en: "Hair disheveled and damp with sweat" },
+  facial_expression: { "zh-tw": "臉頰泛紅，眼神迷離", en: "Cheeks flushed red, dreamy and slightly unfocused eyes" },
+  // 微縮模型系列預設值
+  miniature_character: { "zh-tw": "消防員", en: "Firefighter" },
+  giant_object: { "zh-tw": "燃燒的火柴棍", en: "Burning Matchstick" },
+  // Pop Mart 絨毛玩具預設值
+  plush_expression: { "zh-tw": "眨眼俏皮表情", en: "winking with playful expression" },
+  cute_accessory: { "zh-tw": "針織帽", en: "beanie hats" },
+  festive_archway: { "zh-tw": "中國傳統拱門", en: "traditional Chinese archway" },
+  // 3D等距透視展臺預設值
+  exhibition_type: { "zh-tw": "現代藝術展覽", en: "modern art exhibition" },
+  display_objects: { "zh-tw": "抽象雕塑和裝置藝術", en: "abstract sculptures and installation art" },
+  pod_structure: { "zh-tw": "玻璃立方體展臺", en: "glass cube pod" },
+  // 中國傳統新娘肖像預設值
+  bridal_hair_decoration: { "zh-tw": "紅色紙剪花和蝴蝶裝飾", en: "red paper-cut flowers and butterflies" },
+  traditional_bridal_attire: { "zh-tw": "紅色緞面旗袍", en: "red satin cheongsam" },
+  bridal_jewelry: { "zh-tw": "白色珍珠首飾和小珍珠耳環", en: "white pearl jewelry and small pearl earrings" },
+  // 高端食品廣告預設值
+  premium_food_subject: { "zh-tw": "手工巧克力球", en: "handcrafted chocolate truffles" },
+  ingredient_bits: { "zh-tw": "可可粉和金箔碎屑", en: "cocoa powder and gold flakes" },
+  // 紫禁城雪夜人形鳳凰預設值
+  imperial_palace_scene: { "zh-tw": "紫禁城雪夜", en: "Forbidden City snow night" },
+  phoenix_crown: { "zh-tw": "華麗繁複的金鳳冠", en: "ornate golden phoenix crown" },
+  flowing_garment: { "zh-tw": "流動的紅橙色絲綢華服", en: "flowing red-orange silk robes" },
+  festive_props: { "zh-tw": "口中叼著中式紅包，手中拿著展開的春節祝福", en: "holding red envelope in mouth and unfolded spring festival blessing in hand" },
+  // 室內設計預設值
+  room_type: { "zh-tw": "客廳", en: "Living Room" },
+  interior_design_style: { "zh-tw": "現代輕奢風格", en: "Modern Light Luxury Style" },
+  furniture_set: { "zh-tw": "沙發、地毯、茶几、電視", en: "Sofa, rug, coffee table, TV" },
+  ceiling_material: { "zh-tw": "白色乳膠漆平頂", en: "White latex flat ceiling" },
+  wall_material: { "zh-tw": "白色乳膠漆牆面", en: "White latex paint wall" },
+  floor_material: { "zh-tw": "淺灰色大理石地磚", en: "Light gray marble tile" },
+  interior_lighting: { "zh-tw": "自然光線", en: "Natural lighting" },
+  render_quality: { "zh-tw": "4K超高清分辨率", en: "4K Ultra HD resolution" },
+  room_condition: { "zh-tw": "精緻裝修，高檔材料的質感與細節", en: "Exquisitely decorated, high-end materials with refined details" }
 };
+

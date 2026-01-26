@@ -32,7 +32,58 @@
 /**
  * 樣板系統版本號，每次更新 templates.js 或 banks.js 時請更新此版本號
  */
-export const SYSTEM_DATA_VERSION = "0.7.4";
+export const SYSTEM_DATA_VERSION = "0.8.7";
+
+/**
+ * 分享功能正式環境域名（掃碼匯入需使用公網可存取地址）
+ * 留空則自動使用當前存取地址
+ */
+export const PUBLIC_SHARE_URL = "https://aipromptfill.com"; 
+
+export const TEMPLATE_BRAND_CONCEPT_OBJECT = {
+  "zh-tw": `### 品牌概念單品 (Brand Concept Object)
+一張由 {{company}} 設計並概念化的高端、光滑的概念藝術雜誌編輯照片，展示一個獨特且出乎意料的功能性物品。
+
+**1. 概念與物品 (AI 發明):**
+基於 {{company}} 的設計哲學、品牌傳承和材料語言，通過品牌的視角重新詮釋並設計一個全新的實用單品：{{design_item}}。該物品應具有雕塑感，同時具備功能性，且絕非該品牌常規生產的服裝或包袋。
+
+**2. 材質與細節:**
+該物品由 {{company}} 標誌性的超優質、高觸感材料製成（例如：具有歲月的異域皮革、拉絲航空級鈦金屬、雕刻啞光陶瓷、模製碳纖維或高科技時尚面料）。每個細節都超寫實：清晰的縫線、微觀材料紋理、精密刻印以及複雜的材質對比。
+
+**3. 攝影與燈光:**
+使用飛思中畫幅相機配合 100mm 微距鏡頭拍攝。極淺的景深，焦點清晰地聚集在物品的核心細節上，背景呈現出奶油般細膩平滑的虛化效果。燈光是複雜的工作室柔光箱布光：柔和、包裹式的補光，配合精準的輪廓光，以突出輪廓和材質紋理。
+
+**4. 環境:**
+純淨、超淺的馬卡龍色調（如：脫飽和薄荷綠、淺粉色或乳白色）的無縫工作室環形背景，無陰影。
+
+**5. 佈局與 UI 元素:**
+- **右下角:** {{company}} 的小型、低調、單色灰色 Logo。
+- **左下角:** 小型、極簡的單色灰色文本描述。格式：“CONCEPT STUDY: [產品名稱]. MATERIAL: [主要材質]. SS25。”字體風格類似 Manrope Regular，字間距緊湊。
+
+**規格:**
+- **畫幅:** {{ratio}}`,
+  en: `### Brand Concept Object
+A high-end, glossy concept art magazine editorial photograph of a unique, unexpected functional object conceptualized and designed by {{company}}.
+
+**1. The Concept & Object (AI Invention):**
+Based on the design philosophy, heritage, and material vocabulary of {{company}}, reinterpret and design a novel utility product: {{design_item}}. The object should feel sculptural yet functional, and definitely NOT a standard item like clothing or bags usually produced by the brand.
+
+**2. Materials & Details (Hyper-Premium):**
+The object is constructed from ultra-premium, highly tactile materials characteristic of {{company}} (e.g., patinated exotic leather, brushed aerospace-grade titanium, sculpted matte ceramics, molded carbon fiber, or technical high-fashion textiles). Every detail is hyper-realistic: visible stitching, microscopic material grain, precision engravings, and complex texture contrasts.
+
+**3. Photography & Lighting (Cinematic Studio):**
+Shot on a medium format Phase One camera with a 100mm macro lens. Extremely shallow depth of field, with sharp focus on the hero details of the object and a creamy, smooth bokeh background. The lighting is sophisticated studio softbox lighting: gentle, enveloping fill light with precise rim lighting to accentuate contours and material textures.
+
+**4. Environment:**
+A seamless, impeccably clean studio cyclorama background in a pure, ultra-light pastel tone (e.g., desaturated mint, pale blush, or off-white), free of shadows.
+
+**5. Layout & UI Elements (Strict Placement):**
+- **Bottom Right Corner:** A small, understated, monochrome gray logo of {{company}}.
+- **Bottom Left Corner:** Small, minimalist monochrome gray text. Format: "CONCEPT STUDY: [Invented Product Name]. MATERIAL: [Main Materials]. SS25." Font styled like Manrope Regular with very tight tracking.
+
+**Specifications:**
+- **Ratio:** {{ratio}}`
+};
 
 export const TEMPLATE_WOODEN_ART_XMAS = {
   "zh-tw": `### 雷射切割木質層疊藝術 (Wood Art & Xmas)
@@ -604,6 +655,91 @@ Outside the window, a real {{character_name}} is curiously looking inside at the
 {{ratio}}`
 };
 
+export const TEMPLATE_CHINESE_NEW_YEAR_POSTER = {
+  "zh-tw": `### 中國新年時尚海報
+
+一張現代時尚感的中國新年海報，融合高端時尚攝影與傳統節日元素，極具視覺衝擊力和藝術美感。
+
+**核心主體：**
+{{character_originality}}，面部和頸部極致特寫，{{character_heroic}}騎著白馬優雅而富有力量地衝向螢幕，呈現出即將躍出取景框的瞬間動態。這是一位普通的中國人，穿著精心設計的{{clothing_style_chinese}}，色彩為{{clothing_color_traditional}}，面部表情自然親切而富有生活氣息，妝容精緻淡雅，髮型柔美自然，頸部線條優美修長。人物嘴裡輕輕叼著一個精緻的中國紅包，增添節日趣味和喜慶氛圍。
+
+**構圖與攝影：**
+- 超近距離的面部和頸部特寫，人物幾乎填滿整個畫面
+- 極淺景深讓背景柔化模糊，形成美麗的光斑效果
+- 精準控制的動態模糊，馬尾和髮絲輕柔飄動，展現優雅動感
+- 人物和馬彷彿要躍出取景框，突破畫面邊界，帶來強烈的視覺衝擊
+- 高端時尚攝影的布光技巧，完美輪廓光勾勒人物輪廓和頸部線條
+- 時尚雜誌級別的精修質感，皮膚光滑細膩，五官立體精緻，頸部優美
+- 荷蘭角構圖，增強現代時尚感和動態張力
+
+**細節刻畫：**
+- 面部細節：完美妝容，皮膚細膩光滑，眼神明亮有神，嘴角的紅包增添俏皮感
+- 紅包細節：精緻的中國紅包，金色吉祥圖案，輕微反光質感
+- 服裝質感：進階面料質感，精緻工藝細節，剪裁合身
+- 馬匹細節：乾淨整潔，皮毛健康光澤，鬃毛柔順飄逸
+- 光影效果：進階時尚布光，層次豐富，色彩精緻飽滿，紅包上的金色圖案閃爍
+
+**背景與氛圍：**
+- 真實感的廣袤草原背景，極具縱深感和空間感
+- 天空呈現壯麗的紅色夕陽，晚霞染紅整個天際，營造浪漫氛圍
+- 夕陽的暖色調光輝灑在人物和馬匹身上，形成金色輪廓光
+- 背景虛化處理，草原與紅色天空的交界線柔和自然
+- 整體色調為溫暖優雅的橙紅色調，營造時尚而喜慶的視覺衝擊力
+
+**攝影風格：**
+- 極具藝術吸引力的頂級時尚攝影，富士膠片魅力
+- Fujicolor Velvia風格，色彩濃郁飽滿，對比度適中偏柔
+- 輕微的膠片顆粒質感，增添高端復古藝術氣息
+- 時尚雜誌級景深控制，主體清晰突出，背景柔美虛化
+- 光線層次豐富，暗部和亮部細節保留完整
+- 具有強烈的時尚美感和視覺吸引力
+
+**攝影規格：**
+{{ratio}}
+高分辨率，時尚海報級品質，Fuji膠片攝影風格`,
+  en: `### Chinese New Year Fashion Poster
+
+A modern fashionable Chinese New Year poster blending high-end fashion photography with traditional festive elements, featuring strong visual impact and artistic beauty.
+
+**Core Subject:**
+{{character_originality}}, extreme face and neck close-up. {{character_heroic}} rides a white horse elegantly yet powerfully charging towards the screen, capturing the moment of about to leap out of frame. This is an ordinary Chinese person wearing exquisitely designed {{clothing_style_chinese}} in {{clothing_color_traditional}}, with natural friendly expression full of life, delicate light makeup, soft natural grooming, and elegant slender neck. The character gently holds a refined Chinese red envelope in their mouth, adding festive fun and celebratory atmosphere.
+
+**Composition & Photography:**
+- Ultra-close face and neck shot, the character nearly fills the entire frame
+- Extremely shallow depth of field makes background soft and blurred, forming beautiful bokeh effects
+- Precisely controlled motion blur, mane and hair gently flowing, showing elegant dynamic
+- Character and horse appear about to leap out of the frame, breaking the visual boundary with strong impact
+- High-end fashion lighting techniques, perfect rim light outlining character silhouette and neck lines
+- Fashion magazine grade retouched quality, smooth refined skin, sculpted facial features, elegant neck
+- Dutch angle composition enhancing modern fashion sense and dynamic tension
+
+**Detail Rendering:**
+- Facial details: perfect makeup, smooth refined skin, bright expressive eyes, red envelope at corner of mouth adding playfulness
+- Red envelope details: exquisite Chinese red envelope, golden auspicious patterns, subtle reflective texture
+- Clothing texture: premium fabric quality, exquisite craftsmanship, tailored fit
+- Horse details: clean and tidy, healthy coat sheen, smooth flowing mane
+- Lighting effects: high-end fashion lighting, rich layers, exquisite vibrant colors, golden patterns on red envelope shimmering
+
+**Background & Atmosphere:**
+- Realistic vast grassland background with immense depth and spatial sense
+- Magnificent red sunset sky, the afterglow dyes the entire horizon creating romantic atmosphere
+- Warm sunset glow showers on the character and horse, forming golden rim light
+- Background bokeh treatment, the horizon line of grassland and red sky is soft and natural
+- Overall color tone is warm elegant orange-red, creating fashionable yet festive visual impact
+
+**Photography Style:**
+- Top-tier artistic fashion photography with Fuji film charm
+- Fujicolor Velvia style, rich and vibrant colors, moderate soft contrast
+- Subtle film grain texture adding high-end vintage artistic atmosphere
+- Fashion magazine grade depth of field control, main subject sharp and prominent, background beautifully blurred
+- Rich lighting layers, complete detail retention in shadows and highlights
+- Strong fashion aesthetic and visual appeal
+
+**Photography Specs:**
+{{ratio}}
+High resolution, fashion poster grade quality, Fuji film photography style`
+};
+
 export const TEMPLATE_JAPANESE_PRODUCT_POSTER = {
   "zh-tw": `### 日式產品海報（16:9橫式構圖）
 
@@ -794,6 +930,613 @@ export const TEMPLATE_STREET_DIALOGUE = {
 7. **EMOTION & STORY:** Conveys feelings of loneliness, introspection, identity multiplicity, and the complexity of inner dialogue. The image freezes a quiet philosophical moment within dynamics.`
 };
 
+export const TEMPLATE_FASHION_FOCUS = {
+  "zh-tw": `### 高端時尚雜誌封面 (Fashion Magazine Cover)
+一張高端時尚雜誌封面。人物為{{character_originality}}，氣質自信前衛，身體張力強，動態姿態，直視鏡頭。
+
+**視覺核心:**
+- **服飾:** {{clothing}}，現代編輯感穿搭。
+- **動作:** 模特雙手比起“取景框”手勢，彷彿與一個矩形選中框有互動，選中框覆蓋臉部和肩部。
+- **規則:** 只有選中框內部清晰且為自然彩色；選中框外完全灰度且強像素化（Pixelated），無任何顏色或清晰區域。
+
+**攝影與光影:**
+- **視角:** 略低機位仰拍（Low-angle shot）。
+- **燈光:** 柔和漫射棚拍光。
+
+**版式設計 (Typography):**
+- **頂部:** 居中粗體大寫扁寬型無襯線標題“FOCUS”，上方小字“DECEMBER 2025”；標題左下“VOL + 隨機兩位數”。
+- **左下角:** 文字塊（簡短時尚自信標題、短段落、條形碼）。
+- **右側:** “FASHION INTERVIEW”；右下角襯線體小號“THE EDIT”及大號“01-09的隨機數位”。
+- **層級:** 模特對標題有遮擋疊加，前後景關係分明，乾淨現代。
+- **顏色:** 字體均為白色，蒙太奇風格，文字與圖像形成強烈對比。
+
+**規格:**
+- **畫幅:** {{ratio}}`,
+  en: `### High-end Fashion Magazine Cover - FOCUS
+A high-end fashion magazine cover. The character is {{character_originality}}, with a confident and avant-garde aura, strong body tension, dynamic pose, staring straight at the camera.
+
+**Visual Core:**
+- **Wardrobe:** {{clothing}}, modern editorial styling.
+- **Action:** The model's hands form a "viewfinder" gesture, as if interacting with a rectangular selection box that covers the face and shoulders.
+- **Rule:** Only the area inside the selection box is sharp and in natural color; the area outside the box is entirely grayscale and heavily pixelated, with no color or clear regions.
+
+**Photography & Lighting:**
+- **Angle:** Low-angle shot looking up.
+- **Lighting:** Soft diffused studio lighting.
+
+**Layout & Typography:**
+- **Top:** Centered bold uppercase wide sans-serif title "FOCUS", with "DECEMBER 2025" in small text above it; "VOL + random 2 digits" at the bottom left of the title.
+- **Bottom Left:** Text block (short confident fashion title, short paragraph, barcode).
+- **Right:** "FASHION INTERVIEW"; "THE EDIT" in small serif font and a "random 01-09 digit" in large font at the bottom right.
+- **Layering:** The model overlaps/occludes the title, creating clear depth and a clean, modern look.
+- **Color:** All fonts are white, in a montage style, creating a strong contrast between text and image.
+
+**Specifications:**
+- **Aspect Ratio:** {{ratio}}`
+};
+
+export const TEMPLATE_CITY_GLIMPSE = {
+  "zh-tw": `### 都市一瞥 (City Glimpse)
+一種合適的藝術工具（例如：{{art_tool}}），彷彿正處於創作之中，從左下角向右上角勾勒出一條精緻、優雅的曲線。
+
+**視覺核心:**
+- **筆觸景觀:** 筆觸之中包含著名的 {{city_name_1}} 地標的微縮景觀：精選的一組標誌性地點，融合當地特有的歷史與現代建築、自然元素以及城市生活氣息。
+- **藝術風格:** 整體風格結合了 {{art_style_1}} 與學院派海報設計：多樣化的筆觸與痕跡營造出三維空間感，呈現出立體的微縮景觀與淺浮雕質感。
+- **色彩:** {{dominant_colors}} 為主色調，其間點綴傳統的 {{city_name_1}} 美學元素，並與現代城市天際線相互交織。
+
+**構圖與背景:**
+- **視角:** 畫面為極簡的俯視視角，主體筆觸之外保留大面積留白。
+- **背景:** 具有紋理的紙張（高品質纖維質感），色調明亮、乾淨、清新（例如：{{background_color_clean}}），與畫面主體形成清晰對比，營造純淨感。
+- **構圖要求:** 繪畫工具的筆尖應在筆觸末端（右上角）停住，筆觸之外保留乾淨的留白；微縮景觀僅存在於筆觸內部，細節密集但不顯雜亂。
+
+**大師級排版 (Typography):**
+- **主標題:** “{{city_name_1}}”（與繪畫風格美學相匹配的藝術字體，極具吸引力，高對比度，作為核心視覺層級）。
+- **副標題:** “{{city_glimpse_subtitle}}”（在風格上與主標題及繪畫肌理相互呼應的進階排版）。
+- **裝飾文案:** 全部採用與 {{art_style_1}} 融合的字體風格，通過分段形成節奏與層級，與主標題呼應。
+
+**規格:**
+- **畫質:** 高細節度、超寫實效果、HDR，以及 8K 分辨率。
+- **畫幅比例:** {{ratio}}`,
+  en: `### City Glimpse - Urban Miniature
+A suitable artistic tool (e.g., {{art_tool}}), as if in the middle of creation, sketching a delicate, elegant curve from the bottom left to the top right.
+
+**Visual Core:**
+- **Stroke Landscape:** Within the brushstroke lies a miniature landscape of famous {{city_name}} landmarks: a curated set of iconic locations, blending local history, modern architecture, natural elements, and urban life.
+- **Art Style:** The overall style combines {{art_style}} with academic poster design: diverse brushstrokes and marks create a 3D sense of space, presenting a three-dimensional miniature landscape and low-relief texture.
+- **Color:** {{dominant_colors}} as the dominant tones, interspersed with traditional {{city_name}} aesthetic elements and intertwined with the modern city skyline.
+
+**Composition & Background:**
+- **Perspective:** Minimalist top-down view, with large areas of negative space outside the main stroke.
+- **Background:** Textured high-quality fiber paper, bright and clean tones (e.g., {{background_color_clean}}), creating a clear contrast with the main subject and fostering a sense of purity.
+- **Details:** The tip of the art tool pauses at the end of the stroke (top right), with clean negative space beyond the stroke; the miniature landscape exists only inside the stroke, densely detailed but not cluttered.
+
+**Master-level Typography:**
+- **Main Title:** "{{city_name}}" in an artistic font matching the painting style aesthetics, highly attractive with high contrast as the core visual hierarchy.
+- **Subtitle:** "{{city_glimpse_subtitle}}" in sophisticated typography that echoes the main title and painting texture.
+- **Decorative Text:** All using font styles integrated with {{art_style}}, creating rhythm and hierarchy through segmentation, echoing the main title.
+
+**Specifications:**
+- **Quality:** High detail, hyper-realistic effect, HDR, 8K resolution.
+- **Aspect Ratio:** {{ratio}}`
+};
+
+export const TEMPLATE_MULTIPLE_SELVES_INDOOR = {
+  "zh-tw": `### 多個自我“對話” (室內聚會版)
+
+**1. 核心主題與風格:** 一張具有深刻故事性和極佳攝影質感的攝影人像作品，捕捉“自我對話”的哲學瞬間。呈現電影級敘事感。
+
+**2. 場景與背景地點:** 現代風格的住宅室內。呈現一群樣貌完全一樣的人在室內的不同行為，如同在一場奇幻的節日聚會。
+
+**3. 核心人物 (視覺中心):** 位於客廳畫面正中央，靜止站立，神態若有所思，眼神平靜地凝視鏡頭。這種絕對的靜止與周圍環境的匆忙形成鮮明對比。著裝：{{clothing}}，面部特徵與上傳圖片高度一致。
+
+**4. 周邊人群 (不同維度的自我):** 房間內還有 5 個面貌與核心人物完全一致的“自我”，他們身著不同的服裝（與其當前動作匹配），正在進行以下活動：
+- 人物 A 正在 {{action_status}}；
+- 人物 B 正在 {{action_status}}；
+- 人物 C 正在 {{action_status}}；
+- 人物 D 正在 {{action_status}}；
+- 人物 E 正在 {{action_status}}。
+所有的人都在客廳中各司其職又互不干擾，氛圍呈現出一種節日聚會般的荒誕與歡愉。
+
+**5. 細節與構圖:**
+- **攝影規格:** 使用 {{lens_param}} 拍攝。核心人物面部和上身清晰銳利，前景和背景人物及物體適度虛化，營造出極佳的景深感。
+- **環境細節:** 客廳牆上掛著一個精美的裝飾性木雕藝術品，雕刻著“2025”字樣，其中數位“5”呈現出搖搖欲墜、即將掉落的狀態。
+
+**6. 畫質與色調:** 高分辨率，細膩的膠片質感，帶有輕微的顆粒感。色調以溫暖的橙色調（暖色光）和深藍色陰影（對比色）為主，色彩鮮明且富有層次。
+
+**7. 情緒與故事:** 傳遞出一種孤獨中帶著豐盈、內省中伴隨身份多元性的複雜情感。畫面在動態的忙碌中凝結了一個安靜的哲學思考瞬間。`,
+  en: `### Multiple Self-Dialogue (Indoor Party Edition)
+
+**1. Core Theme & Style:** A storytelling photography portrait with exceptional quality, capturing a philosophical moment of "self-dialogue." It presents a cinematic narrative feel.
+
+**2. Scene & Location:** A modern residential interior. It features a group of identical-looking people engaging in various activities within the room, resembling a fantastical holiday party.
+
+**3. Central Character (Visual Anchor):** Located in the exact center of the living room, standing perfectly still with a pensive expression, eyes calmly staring at the camera. This absolute stillness forms a sharp contrast with the surrounding hustle. Wardrobe: {{clothing}}, facial features strictly consistent with the uploaded image.
+
+**4. Surrounding Figures (Multiple Selves):** There are 5 other "selves" in the room, identical in appearance to the central character, wearing different outfits (matching their actions) and engaging in the following:
+- Person A is {{action_status}};
+- Person B is {{action_status}};
+- Person C is {{action_status}};
+- Person D is {{action_status}};
+- Person E is {{action_status}}.
+Everyone is busy with their own task in the living room without interfering with each other, creating an atmosphere of absurd holiday-like joy.
+
+**5. Details & Composition:**
+- **Photography Specs:** Shot with {{lens_param}}. The central character's face and upper body are sharp and clear, while foreground/background figures and objects are moderately blurred to create excellent depth of field.
+- **Environmental Detail:** A decorative wooden carving hangs on the wall, reading "2025," where the digit "5" appears wobbly and on the verge of falling off.
+
+**6. Quality & Tone:** High resolution, fine film texture with slight grain. The color palette is dominated by warm oranges (warm lighting) and deep blue shadows (complementary colors), providing vivid and layered colors.
+
+**7. Emotion & Story:** Conveys a complex sense of identity multiplicity and introspection within solitude. The image freezes a quiet philosophical moment amidst dynamic activity.`
+};
+
+export const TEMPLATE_CHARACTER_SHEET_ART = {
+  "zh-tw": `### 角色設定稿 (Character Sheet)
+**核心內容:** 角色設定稿，基於 {{character_originality}}。
+
+**構圖:** 多角度視角 (Multiple angles)，豐富的表情變化 (Expressive facial variations)。
+
+**媒介:** {{art_tool}}。
+
+**背景:** {{background_style}}。
+
+**風格:** {{draw_style}}，線條利落 (Sharp linework)。
+
+**色彩:** 柔和淡彩色 (Soft pastel color palette)，高對比度 (High contrast)。`,
+  en: `### Character Sheet
+  **Core Content:** Character Sheet, based on {{character_originality}}.
+  
+  **Composition:** Multiple angles, expressive facial variations.
+  
+  **Medium:** {{art_tool}}.
+  
+  **Background:** {{background_style}}.
+  
+  **Style:** {{draw_style}}, sharp linework.
+  
+  **Color:** Soft pastel color palette, high contrast.`
+};
+
+export const TEMPLATE_UNDERWATER_CAUSTICS = {
+  "zh-tw": `### 創意水下攝影：焦散之美 (Underwater Caustics)
+
+**主體設定:**
+使用上傳圖片中的人物作為{{subject}}，嚴格保持面部特徵的一致性。
+人物穿著一件{{clothing}}，由於在水下浸溼，衣物呈現出若隱若現的半透明質感。
+
+**動作與場景:**
+人物沉浸在{{underwater_color}}的透明水下，姿態舒展，微微抬頭仰望上方。
+身體周圍環繞著許多{{creatures}}，營造出自然的生態律動感。
+
+**光影藝術 (Caustics):**
+核心視覺效果為強烈的**焦散光影（Caustics）**：陽光穿過起伏的水面，在人物的面部和衣服上投射出波動的金色光紋。
+光線在水中形成明顯的**丁達爾效應 (Tyndall Effect)**，光柱從水面直插水底，增強空間深度。
+
+**氛圍與畫質:**
+- **氛圍:** 夢幻、超現實、靜謐、電影質感。
+- **畫質:** 照片級真實，8K分辨率，極高細節，捕捉每一處水花和氣泡。
+
+**規格:**
+- **畫幅:** {{ratio}}`,
+  en: `### Creative Underwater Photography: Beauty of Caustics
+
+**Subject:**
+Use the character from the uploaded image as {{subject}}, strictly maintaining facial consistency.
+The character is wearing a {{clothing}}, which appears semi-transparent due to being wet underwater.
+
+**Action & Scene:**
+The character is immersed in {{underwater_color}}, relaxed, and looking up slightly towards the surface.
+Surrounded by many {{creatures}}, creating a natural ecological flow.
+
+**Lighting (Caustics):**
+The core visual effect is strong **Caustics**: sunlight passing through the wavy water surface, casting undulating light patterns onto the character's face and clothes.
+Beams of light create a distinct **Tyndall Effect**, piercing through the water to enhance spatial depth.
+
+**Atmosphere & Quality:**
+- **Aura:** Dreamy, surreal, quiet, cinematic.
+- **Quality:** Photorealistic, 8K resolution, high detail, capturing every droplet and bubble.
+
+**Specifications:**
+- **Ratio:** {{ratio}}`
+};
+
+export const TEMPLATE_DAILY_SNAPSHOT = {
+  "zh-tw": `### 日常生活快照 (Daily Snapshot)
+
+**場景設定:**
+{{background_scene}}。
+
+**攝影風格:**
+{{lighting}}。畫面沒有經過精心的構圖或布光，呈現出最真實的記錄感。
+
+**人物特徵:**
+主體為{{subject}}，採用{{clothing}}。{{accessory_glasses}}。
+
+**動態與構圖:**
+{{action_status}}。採用{{camera_angle}}。
+
+**服飾風味:**
+{{underwear_style}}。
+
+**畫幅:**
+{{ratio}}`,
+  en: `### Daily Snapshot
+
+**Scene Setting:**
+{{background_scene}}.
+
+**Photography Style:**
+{{lighting}}. Not carefully composed or lit, presenting an authentic sense of recording.
+
+**Character Features:**
+The subject is {{subject}}, with a {{clothing}}. {{accessory_glasses}}.
+
+**Action & Composition:**
+{{action_status}}. Using an {{camera_angle}}.
+
+**Outfit Style:**
+{{underwear_style}}.
+
+**Aspect Ratio:**
+{{ratio}}`
+};
+
+export const TEMPLATE_FINE_ART_GARDEN = {
+  "zh-tw": `### 唯美藝術花園人像 (Fine-art Garden Portrait)
+
+**核心目標:**
+創作一張充滿浪漫、空靈氛圍的花園藝術人像。
+
+**人物設定:**
+主體為{{subject}}。她留著{{hair_style}}，神情平靜內斂，帶著淡淡的憂鬱。{{action_status}}。她穿著{{clothing}}。
+
+**環境與氛圍:**
+{{background_scene}}。畫面中充滿了繁茂的開花植物和柔和的綠植。{{flower_type}}，被微風捕捉到半空中的動態。
+
+**構圖與攝影:**
+採用{{camera_angle}}。優雅的中心構圖，極淺的景深，背景是奶油般細膩的虛化效果。使用{{lens_param}}拍攝。
+
+**光影與色彩:**
+{{lighting}}。色調以柔和的綠色、青色、淡桃色和白色為主。呈現出一種繪畫般的、低飽和度的浪漫色調。
+
+**藝術風格:**
+{{role}}。追求極高的織物紋理和皮膚質感。
+
+**畫幅:**
+{{ratio}}`,
+  en: `### Dreamy Fine-art Garden Portrait
+
+**Objective:**
+Create a dreamy fine-art portrait with a romantic, ethereal garden atmosphere.
+
+**Subject Details:**
+The subject is {{subject}}. She has {{hair_style}}, with a calm, introspective, slightly melancholic expression. {{action_status}}. She is wearing {{clothing}}.
+
+**Scene & Atmosphere:**
+{{background_scene}}. The frame is filled with abundant flowering plants and soft greenery. {{flower_type}}, caught mid-motion by a gentle breeze.
+
+**Composition & Photography:**
+A {{camera_angle}}. Elegant, centered composition with a shallow depth of field and creamy bokeh. Shot with a {{lens_param}}.
+
+**Lighting & Color:**
+{{lighting}}. The color palette includes muted greens, soft teals, and pale peach/white accents. Painterly, desaturated, romantic tones.
+
+**Art Direction:**
+{{role}}. Ultra-detailed fabric and natural skin texture.
+
+**Aspect Ratio:**
+{{ratio}}`
+};
+
+export const TEMPLATE_SURVEILLANCE_STILL = {
+  "zh-tw": `### 隱藏攝像機 / 監控畫面 (Surveillance Still)
+
+**相機設定:**
+{{camera_angle}}。隱藏拍攝視角，具有{{lighting}}。
+
+**人物主體:**
+主體為{{character_originality}}。留著{{hair_style}}。{{action_status}}。她身穿{{clothing}}。
+
+**環境背景:**
+{{background_scene}}。氛圍安靜、私密且親密。
+
+**智慧識別 (Overlay):**
+- **臉部鎖定:** 紅色半透明矩形框精準鎖定面部，帶有交叉瞄準線。
+- **局部特寫:** 右上角浮動放大窗口，4倍變焦特寫眼睛細節，顯示抓拍的高光。
+- **狀態指示:** 螢幕邊緣顯示紅點 REC 指示器及警告文本：“ALERT: SUBJECT AWARE / EYE CONTACT DETECTED”。
+- **時間戳記:** 角落帶有復古膠片時間戳記 “[REC] 23:47:32 | CAM 04 - DRESSING RM”。
+
+**構圖與氛圍:**
+主體位於畫面中心，目光直視鏡頭。呈現出一種脆弱、緊張且極具臨場感的瞬間。
+
+**畫幅:**
+{{ratio}}`,
+  en: `### Surveillance Still / Hidden Camera Footage
+
+**Camera Settings:**
+{{camera_angle}}. Hidden perspective with {{lighting}}.
+
+**Subject:**
+The subject is {{character_originality}}, with {{hair_style}}. {{action_status}}. She is wearing {{clothing}}.
+
+**Environment:**
+{{background_scene}}. The atmosphere is quiet, private, and intimate.
+
+**Face Detection & Overlay:**
+- **Face Lock:** A faint red rectangular bounding box with crosshair locked intensely on her face.
+- **Zoom Inset:** Floating top-right zoom-in inset (4.0x ratio), focusing on her eyes with clear catchlight.
+- **Alert Text:** "ALERT: SUBJECT AWARE / EYE CONTACT DETECTED" displayed on screen.
+- **Rec Indicator:** Red 'REC' indicator and vintage timestamp "[REC] 23:47:32 | CAM 04 - DRESSING RM" in the corner.
+
+**Composition:**
+Subject centered, direct gaze into the lens. The tone is vulnerable, tense, and surprising.
+
+**Aspect Ratio:**
+{{ratio}}`
+};
+
+export const TEMPLATE_CUTE_DYNAMIC_PORTRAIT = {
+  "zh-tw": `### 可愛動態人像
+
+**房間環境**:
+{{room_style_cute}}
+
+**角色**:
+20歲前半的日本女大學生。
+
+**攝影參數**:
+- 極端的地板級別低角度蟲視視角
+- {{lens_type}}的畸變讓她看起來很巨大的構圖
+- {{cute_pose_dynamic}}
+
+**服裝**:
+{{cute_outfit}}，隨著動作自然搖擺。
+
+**道具**:
+右手拿著和房間裡一樣的可愛動物絨毛玩具（粉色或白色的熊或兔子），自然地輕輕遮擋裙子後面的姿勢。完全看不到內衣。
+
+**光影**:
+溫暖的室內照明和窗戶射入的自然光，妖精燈的柔和光輝，對肌膚友好的高光。
+
+**氛圍**:
+充滿自信、滿童心、可愛又有點性感、動態的室內肖像照。`,
+
+  en: `### Cute Dynamic Portrait
+
+**Room Environment**:
+{{room_style_cute}}
+
+**Character**:
+Japanese female college student, early 20s.
+
+**Photography Parameters**:
+- Extreme floor-level low-angle worm's-eye view
+- Composition with {{lens_type}} distortion making her appear massive
+- {{cute_pose_dynamic}}
+
+**Outfit**:
+{{cute_outfit}}, swaying naturally with movement.
+
+**Prop**:
+Holding a small cute animal plushie (pink or white bear/rabbit) in right hand, naturally posing to lightly hide the back of skirt. Underwear absolutely not visible.
+
+**Lighting**:
+Warm indoor lighting and natural light from window, soft glow of fairy lights, gentle highlights on skin.
+
+**Atmosphere**:
+Confident, full of playfulness, cute yet slightly sexy, dynamic indoor portrait.
+
+**Note**:
+Copyright characters and existing anime styles are strictly prohibited.`
+};
+
+export const TEMPLATE_FITNESS_SELFIE = {
+  "zh-tw": `### 健身自拍場景 (Fitness Selfie)
+
+**核心氛圍:**
+一張原始真實的鏡子自拍快照，在繁忙的健身房用機頂閃光燈直閃拍攝。
+
+**主體人物:**
+一位年輕漂亮的江南女子，擁有"網紅"臉龐和溫婉的東方魅力，呈現{{physical_state}}。她正在做{{fitness_pose}}，側身對著鏡子，手持智慧手機。
+
+**服裝與外觀:**
+穿著{{fitness_clothing}}。頭髮{{sweat_appearance}}，臉頰泛紅，顯示剛完成運動的明顯痕跡。
+
+**面部表情:**
+{{facial_expression}}
+
+**場景細節:**
+{{fitness_location}}
+
+**拍照風格:**
+{{selfie_style}}
+
+**技術效果:**
+照片具有明顯的{{photo_effect}}，營造出真實、不做擺拍的日常生活氛圍。
+
+**規格:**
+畫幅: {{ratio}} --niji 7`,
+  en: `### Fitness Selfie Scene
+
+**Core Atmosphere:**
+A raw, candid mirror selfie snapshot taken in a busy gym with an on-camera flash firing.
+
+**Subject:**
+A young pretty Chinese Jiangnan woman with a "wanghong" face and gentle Eastern charm, with {{physical_state}}. She is in a {{fitness_pose}}, turned sideways to the mirror, holding a smartphone.
+
+**Clothing & Appearance:**
+Wearing {{fitness_clothing}}. Hair is {{sweat_appearance}}, and cheeks are flushed red, showing clear signs of a recent workout.
+
+**Facial Expression:**
+{{facial_expression}}
+
+**Scene Details:**
+{{fitness_location}}
+
+**Selfie Style:**
+{{selfie_style}}
+
+**Technical Effects:**
+The photo has noticeable {{photo_effect}}, creating an authentic, unposed daily life atmosphere.
+
+**Specifications:**
+Aspect Ratio: {{ratio}} --niji 7`
+};
+
+/**
+ * 微縮場景模型
+ */
+export const TEMPLATE_MINIATURE_MODEL = {
+  "zh-tw": `### 微縮場景模型
+
+一個微縮場景模型，展現了渺小的 {{miniature_character}} 與一個超大的 {{giant_object}} 互動的場景。
+
+誇張的比例對比、富有表現力的姿勢、電影級的光影效果。極其精細的道具、手工製作的逼真質感、微距鏡頭視角。
+
+**畫幅比例**：{{ratio}}`,
+
+  en: `### Miniature Scene Model
+
+A miniature scene model showcasing a tiny {{miniature_character}} interacting with a giant {{giant_object}}.
+
+Exaggerated scale contrast, expressive poses, cinematic lighting. Extremely detailed props, handmade realistic textures, macro lens perspective.
+
+**Aspect Ratio**: {{ratio}}`
+};
+
+export const TEMPLATE_POP_MART_PLUSH = {
+  "zh-tw": `### Pop Mart 盲盒風格絨毛玩具壁紙
+
+一張垂直手機壁紙，展示一群可愛的擬人化馬絨毛玩具堆疊在 {{festive_archway}} 內。Pop Mart 盲盒風格，柔軟絨毛質感，C4D 渲染。
+
+高度多樣化和有趣表情：{{plush_expression}}。
+
+豐富多樣的獨特配飾和裝飾：{{cute_accessory}}。
+
+色彩豐富、溫暖照明、超精細細節，可愛有趣的氛圍。`,
+
+  en: `### Pop Mart Blind Box Style Plush Toys Wallpaper
+
+A vertical phone wallpaper featuring a crowded group of cute anthropomorphic horse plush toys stacked inside a {{festive_archway}}. Pop Mart blind box style, soft fuzzy fur texture, C4D render.
+
+Highly diverse and funny expressions: {{plush_expression}}.
+
+Wide variety of unique accessories and decorations: {{cute_accessory}}.
+
+Colorful, warm lighting, ultra-detailed, cute and playful vibe.`
+};
+
+export const TEMPLATE_3D_ISOMETRIC_DIORAMA = {
+  "zh-tw": `### 3D等距透視模型展臺
+
+一個乾淨、極簡的3D等距透視模型展臺，展示{{exhibition_type}}，特色是{{display_objects}}佈置在{{pod_structure}}內，微妙的光照點綴，光滑的地板表面，柔和的攝影棚燈光，逼真的材質，圓潤的邊緣，微型建築模型風格，高細節，中性背景。`,
+
+  en: `### 3D Isometric Diorama
+
+A clean, minimal 3D isometric diorama of a {{exhibition_type}}, featuring {{display_objects}} arranged within a {{pod_structure}}, subtle lighting accents, smooth floor surfaces, soft studio lighting, realistic materials, rounded edges, miniature architectural model style, high detail, neutral background.`
+};
+
+export const TEMPLATE_CHINESE_BRIDAL_PORTRAIT = {
+  "zh-tw": `### 中國傳統新娘肖像攝影
+
+一張傳統中式新娘肖像攝影作品。女性主體盤著髮髻，裝飾著{{bridal_hair_decoration}}，身穿{{traditional_bridal_attire}}，佩戴{{bridal_jewelry}}。
+
+寫實的人體比例，平視視角，帶有紙剪裝飾前景的近距離肖像。
+
+**核心材質**：光滑緞面質感、精緻紙剪紋理、光澤珍珠表面。
+
+**光影氛圍**：柔和側光、柔和陰影、溫暖優雅的傳統中式喜慶氛圍。
+
+**技術參數**：50mm鏡頭`,
+
+  en: `### Chinese Traditional Bridal Portrait Photography
+
+A traditional Chinese bridal portrait photograph. A woman with an updo hairstyle adorned with {{bridal_hair_decoration}}, wearing {{traditional_bridal_attire}} and {{bridal_jewelry}}.
+
+Realistic human proportion, eye-level perspective, close-up portrait with paper-cut decorative foreground.
+
+**Key Materials**: Smooth satin texture, delicate paper-cut texture, glossy pearl surface.
+
+**Lighting & Atmosphere**: Soft side lighting, soft shadows, warm and elegant traditional Chinese festive atmosphere.
+
+**Technical Parameters**: 50mm lens`
+};
+
+export const TEMPLATE_PREMIUM_FOOD_ADVERTISING = {
+  "zh-tw": `### 高端食品廣告攝影
+
+{{premium_food_subject}}，高端食品廣告，白色無縫背景，高調攝影棚燈光，懸浮堆疊構圖，飄浮的食品塊，散落著{{ingredient_bits}}，乾淨極簡佈局，表面清晰柔和陰影，超寫實，微距產品攝影，100mm鏡頭觀感，f/8清晰焦點，微妙紋理細節，編輯商業風格，8k分辨率。`,
+
+  en: `{{premium_food_subject}}, premium food advertising, white seamless background, high key studio lighting, floating stacked composition, levitating pieces, {{ingredient_bits}} scattered, clean minimal layout, crisp soft shadow on surface, ultra realistic, macro product photography, 100mm lens look, f/8 sharp focus, subtle texture detail, editorial commercial, 8k`
+};
+
+export const TEMPLATE_FORBIDDEN_CITY_PHOENIX = {
+  "zh-tw": `### 紫禁城雪夜人形鳳凰
+
+在{{imperial_palace_scene}}中，一位"人形鳳凰"化身宮殿的靈魂。她頭戴{{phoenix_crown}}，身披{{flowing_garment}}，{{festive_props}}。
+
+構圖上將華麗繁複的頭飾與流動的絲綢華服與身後輝煌的建築相呼應，形成強烈的視覺共鳴。背光在漫天飛雪中極大地增強了神話般的氛圍，營造出穿越時空、華美而莊嚴的夢幻意境。`,
+
+  en: `### Forbidden City Snow Night Phoenix
+
+In {{imperial_palace_scene}}, a "human phoenix" embodies the soul of the palace. She wears {{phoenix_crown}} and {{flowing_garment}}, {{festive_props}}.
+
+The composition creates a strong visual resonance between the ornate headdress and flowing robes with the magnificent architecture behind. The backlight amidst falling snow greatly enhances the mythical atmosphere, creating a dreamlike artistic conception that transcends time and space with magnificence and solemnity.`
+};
+
+export const TEMPLATE_INTERIOR_RENDERING = {
+  "zh-tw": `### 室內設計真實渲染
+
+保持原圖視角和牆體結構，生成室內 {{room_type}} 真實渲染圖。進行合理的室內傢俱佈置與材質搭配，為室內天花板、牆面、地板分別賦予材質，整體呈現 {{interior_design_style}}。房間內外均進行真實感渲染。
+
+包括 {{furniture_set}}，材質質感逼真，{{interior_lighting}}。整體畫面呈現出專業建築攝影的光線效果，具備 {{render_quality}} 的圖像細節。
+
+**材質細節**:
+- 天花板：{{ceiling_material}}
+- 牆面：{{wall_material}}
+- 地板：{{floor_material}}`,
+
+  en: `### Interior Design Photorealistic Rendering
+
+Maintaining the original perspective and wall structure, generate a realistic interior rendering of {{room_type}}. Perform reasonable interior furniture layout and material matching, assigning materials to the ceiling, walls, and floor respectively, presenting an overall {{interior_design_style}}. Both interior and exterior are rendered with realism.
+
+Including {{furniture_set}}, with realistic material textures and {{interior_lighting}}. The overall image presents professional architectural photography lighting effects, with {{render_quality}} image details.
+
+**Material Details**:
+- Ceiling: {{ceiling_material}}
+- Walls: {{wall_material}}
+- Floor: {{floor_material}}`
+};
+
+export const TEMPLATE_ISOMETRIC_INTERIOR_SCENE = {
+  "zh-tw": `### 等距視角室內場景
+
+基於設計需求，創作一張isometric視角（等距軸測視角）的{{room_type}}室內場景圖像，無任何透視效果，保持視角和相機位置的一致性。包括建築的主體部分保持一致。
+
+**房間狀態**: {{room_condition}}
+
+**設計風格**: {{interior_design_style}}
+
+**材質細節**:
+- 地面：{{floor_material}}
+- 牆面：{{wall_material}}
+
+**技術要求**: 使用3D建模的材質質感和建模軟體常用的渲染效果，包括材質紋理效果、AO效果以及描邊效果（根據房間狀態選擇是否使用）。白色背景，Blender渲染質感。`,
+
+  en: `### Isometric Interior Scene
+
+Based on design requirements, create an isometric perspective (orthographic axonometric view) {{room_type}} interior scene image with no perspective effects, maintaining consistency in viewing angle and camera position. The main architectural elements remain consistent.
+
+**Room Condition**: {{room_condition}}
+
+**Design Style**: {{interior_design_style}}
+
+**Material Details**:
+- Floor: {{floor_material}}
+- Walls: {{wall_material}}
+
+**Technical Requirements**: Use 3D modeling material textures and common rendering software effects, including material texture effects, AO effects, and outline effects (selected based on room condition). White background, Blender rendering quality.`
+};
+
 /**
  * 可用的樣板標記
  */
@@ -806,7 +1549,8 @@ export const TEMPLATE_TAGS = [
   "卡通",
   "寵物",
   "遊戲",
-  "創意"
+  "創意",
+  "節日"
 ];
 
 /**
@@ -825,7 +1569,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "角色概念分解圖", en: "Character Concept Sheet" },
     content: DEFAULT_TEMPLATE_CONTENT,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/08/ec433cf214faf102.jpg",
-    author: "官方",
+    author: "@berryxia（Berryxia.AI）",
     selections: {},
     tags: ["人物", "創意", "圖表"],
     language: ["zh-tw", "en"]
@@ -835,7 +1579,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "3x3 攝影網格", en: "3x3 Photo Grid" },
     content: TEMPLATE_PHOTO_GRID,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/08/5302794e63fa130b.jpg",
-    author: "官方",
+    author: "@tanshilong（MarioTan）",
     selections: {
       "clothing": { "zh-tw": "炭灰色無袖連衣裙", en: "Charcoal grey sleeveless dress" },
       "grid_pose-0": { "zh-tw": "前景手指虛化", en: "Out-of-focus fingers in foreground" },
@@ -865,7 +1609,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "時尚情緒板插畫", en: "Fashion Moodboard" },
     content: TEMPLATE_FASHION_MOODBOARD,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/08/4d9f92ccb4113fdd.jpg",
-    author: "官方",
+    author: "@tanshilong（MarioTan）",
     selections: {},
     tags: ["人物", "創意", "卡通"],
     language: ["zh-tw", "en"]
@@ -875,7 +1619,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "人物趣味合影", en: "Character Selfie" },
     content: TEMPLATE_CHARACTER_SELFIE,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/08/c2312d24d0f2c38e.jpeg",
-    author: "官方",
+    author: "@tanshilong（MarioTan）",
     selections: {},
     tags: ["人物", "創意"],
     language: ["zh-tw", "en"]
@@ -885,7 +1629,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "經典場景微縮復刻", en: "Classic Scene Miniature" },
     content: TEMPLATE_CLASSIC_SCENE,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/10/1eac697f5a438542.jpg",
-    author: "官方",
+    author: "@tanshilong（MarioTan）",
     selections: {
       "classic_scene": { "zh-tw": "千與千尋", en: "Spirited Away" },
       "render_style": { "zh-tw": "Octane Render 和 Cinema 4D", en: "Octane Render and Cinema 4D" },
@@ -899,7 +1643,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "視覺化企業成長之路", en: "Corporate Evolution Path" },
     content: TEMPLATE_CORPORATE_GROWTH,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/10/a7e87e49c6144fdc.jpg",
-    author: "官方",
+    author: "@langzihan（Keng哥）",
     selections: {
       "company": { "zh-tw": "任天堂（Nintendo）", en: "Nintendo" },
       "render_style": { "zh-tw": "3D像素風格", en: "3D Pixel Art Style" },
@@ -913,7 +1657,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "極端魚眼都市奇觀", en: "Fisheye Urban Wonder" },
     content: TEMPLATE_FISHEYE_URBAN,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/14/b21165a2afefaf4d.jpg",
-    author: "官方",
+    author: "@tanshilong（MarioTan）",
     selections: {
       "lens_type": { "zh-tw": "極端魚眼鏡頭", en: "Extreme Fisheye Lens" },
       "role": { "zh-tw": "年輕女性", en: "Young woman" },
@@ -958,7 +1702,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
       "https://s3.bmp.ovh/imgs/2025/12/16/a6106f5cc6e92a74.jpg",
       "https://s3.bmp.ovh/imgs/2025/12/16/cf8edb6f54db15bf.jpg"
     ],
-    author: "官方",
+    author: "@hx831126（虎小象）",
     selections: {
       "travel_location": { "zh-tw": "東北雪鄉", en: "Snow Village in Northeast China" },
       "ratio": { "zh-tw": "9:16直式構圖", en: "9:16 Vertical" }
@@ -971,7 +1715,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "漫畫人物成真", en: "Manga to Reality" },
     content: TEMPLATE_MANGA_TO_REALITY,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/16/f5291c56ece88cd9.jpg",
-    author: "官方",
+    author: "PlayForge AI(@94van.AI)",
     selections: {
       "character_originality": { "zh-tw": "使用附圖中的人物，確保結果與人物一致性", en: "Use character in attachment, ensure consistency" },
       "comic_scene": { "zh-tw": "唯美的臥室", en: "Beautiful bedroom" },
@@ -985,7 +1729,12 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "設計大師的產品設計", en: "Industrial Design Masterpiece" },
     content: TEMPLATE_INDUSTRIAL_DESIGN,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/17/7dbe43ae66b1a78c.jpg",
-    author: "官方",
+    imageUrls: [
+      "https://s3.bmp.ovh/imgs/2025/12/17/7dbe43ae66b1a78c.jpg",
+      "https://s3.bmp.ovh/imgs/2025/12/29/e6b0964f5a9a55bd.jpg",
+      "https://s3.bmp.ovh/imgs/2025/12/29/fa5b709a4df577fd.jpg"
+    ],
+    author: "@tanshilong（MarioTan）",
     selections: {
       "designer": { "zh-tw": "Jonathan Ive (Jony Ive)", en: "Jonathan Ive" },
       "design_item": { "zh-tw": "無人機", en: "Drone" },
@@ -999,7 +1748,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "3x3 攝影網格出格版", en: "3x3 Photo Grid (Out of Box)" },
     content: TEMPLATE_PHOTO_GRID_V2,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/17/77bfd2bf7abc3eac.png",
-    author: "官方",
+    author: "PlayForge AI(@94van.AI)",
     selections: {
       "clothing": { "zh-tw": "炭灰色無袖連衣裙", en: "Charcoal grey sleeveless dress" },
       "grid_pose-0": { "zh-tw": "前景手指虛化", en: "Out-of-focus fingers in foreground" },
@@ -1100,7 +1849,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
     name: { "zh-tw": "角色藝術拆解升級版", en: "Role Deconstruction" },
     content: TEMPLATE_PIXAR_DECONSTRUCTION,
     imageUrl: "https://s3.bmp.ovh/imgs/2025/12/26/1931582fcfb9d1e5.png",
-    author: "berryxia（Berryxia.AI）",
+    author: "@berryxia（Berryxia.AI）",
     selections: {
       "render_style": { "zh-tw": "Pixar 卡通渲染", en: "Pixar Cartoon Rendering" },
       "subject": { "zh-tw": "時尚女性角色", en: "Fashionable Female Character" },
@@ -1137,6 +1886,339 @@ export const INITIAL_TEMPLATES_CONFIG = [
       "ratio": { "zh-tw": "3:4直式構圖", en: "3:4 Vertical" }
     },
     tags: ["產品", "創意", "攝影"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_brand_concept_object",
+    name: { "zh-tw": "品牌概念單品", en: "Brand Concept Object" },
+    content: TEMPLATE_BRAND_CONCEPT_OBJECT,
+    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/27/e893bd88e9ea324b.png",
+    author: "@AmirMushich",
+    selections: {
+      "company": { "zh-tw": "Apple", en: "Apple" },
+      "design_item": { "zh-tw": "無人機", en: "Drone" },
+      "ratio": { "zh-tw": "1:1", en: "1:1 Square" }
+    },
+    tags: ["產品", "創意", "攝影"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_fashion_focus",
+    name: { "zh-tw": "高端時尚雜誌封面 - FOCUS", en: "Fashion Magazine - FOCUS" },
+    content: TEMPLATE_FASHION_FOCUS,
+    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/29/ebe3e34755c3ef2e.png",
+    imageUrls: [
+      "https://s3.bmp.ovh/imgs/2025/12/29/ebe3e34755c3ef2e.png",
+      "https://s3.bmp.ovh/imgs/2026/01/09/c5b49962fae9dfa3.jpg "
+    ],
+    author: "Latte(@0xbisc)",
+    selections: {
+      "character_originality": { "zh-tw": "使用附圖中的人物，確保結果與人物一致性", en: "Use character in attachment, ensure consistency" },
+      "clothing": { "zh-tw": "秋冬季頂級時尚服飾", en: "High-end autumn/winter fashion apparel" },
+      "ratio": { "zh-tw": "3:4直式構圖", en: "3:4 Vertical" }
+    },
+    tags: ["人物", "攝影", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_city_glimpse",
+    name: { "zh-tw": "都市一瞥", en: "City Glimpse" },
+    content: TEMPLATE_CITY_GLIMPSE,
+    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/29/d02fe64ad317ad60.jpg", // 暫無預覽圖，使用佔位或稍後由使用者補充
+    author: "阿茲特克小羊駝(@AztecaAlpaca)",
+    selections: {
+      "city_name": { "zh-tw": "京都", en: "Kyoto" },
+      "art_style": { "zh-tw": "浮世繪 (Ukiyo-e)", en: "Ukiyo-e" },
+      "art_tool": { "zh-tw": "毛筆", en: "Ink Brush" },
+      "dominant_colors": { "zh-tw": "傳統的京都紅與古樸的墨黑色", en: "Traditional Kyoto red and antique ink black" },
+      "background_color_clean": { "zh-tw": "純白", en: "Pure White" },
+      "city_glimpse_subtitle": { "zh-tw": "古韻悠長的千年古都", en: "The thousand-year-old ancient capital" },
+      "ratio": { "zh-tw": "4:3橫式構圖", en: "4:3 Horizontal" }
+    },
+    tags: ["建築", "創意", "攝影"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_multiple_selves_indoor",
+    name: { "zh-tw": "多個自我“對話” (室內聚會版)", en: "Multiple Self-Dialogue (Indoor Party)" },
+    content: TEMPLATE_MULTIPLE_SELVES_INDOOR,
+    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/30/fe7893150e65cc54.jpg", 
+    author: "@tanshilong(MarioTan)",
+    selections: {
+      "clothing": { "zh-tw": "秋冬季休閒服飾", en: "autumn/winter casual wear" },
+      "action_status-0": { "zh-tw": "玩PS5", en: "playing PS5" },
+      "action_status-1": { "zh-tw": "彈吉他", en: "playing the guitar" },
+      "action_status-2": { "zh-tw": "在電腦前寫程式碼", en: "coding in front of a computer" },
+      "action_status-3": { "zh-tw": "拿著香蕉在畫畫", en: "painting with a banana" },
+      "action_status-4": { "zh-tw": "穿潛水腳蹼", en: "putting on diving fins" },
+      "lens_param": { "zh-tw": "85mm, f/1.8", en: "85mm, f/1.8" },
+      "ratio": { "zh-tw": "3:4直式構圖", en: "3:4 Vertical" }
+    },
+    tags: ["人物", "攝影", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_character_sheet_art",
+    name: { "zh-tw": "角色設定稿", en: "Character Sheet" },
+    content: TEMPLATE_CHARACTER_SHEET_ART,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/04/d530d1e38098944e.png",
+    author: "@tanshilong",
+    selections: {
+      "character_originality": { "zh-tw": "創作一個原創人物", en: "Create an original character" },
+      "art_tool": { "zh-tw": "毛筆", en: "Ink Brush" },
+      "background_style": { "zh-tw": "極簡純色背景", en: "Minimalist solid color background" },
+      "draw_style": { "zh-tw": "手繪漫畫風格", en: "Hand-drawn Manga Style" }
+    },
+    tags: ["人物", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_underwater_caustics",
+    name: { "zh-tw": "水下焦散人像攝影", en: "Underwater Caustics Portrait" },
+    content: TEMPLATE_UNDERWATER_CAUSTICS,
+    imageUrl: "https://s41.ax1x.com/2026/01/05/pZdAL9K.jpg",
+    author: "@tanshilong",
+    selections: {
+      "subject": { "zh-tw": "女性", en: "Woman" },
+      "clothing": { "zh-tw": "白色襯衫與內衣", en: "white shirt and lingerie" },
+      "underwater_color": { "zh-tw": "深青色透明水下", en: "deep teal transparent underwater" },
+      "creatures": { "zh-tw": "許多銀色小魚", en: "many small silver fish" },
+      "ratio": { "zh-tw": "3:4直式構圖", en: "3:4 Vertical" }
+    },
+    tags: ["人物", "攝影", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_daily_snapshot",
+    name: { "zh-tw": "日常氛圍快照", en: "Daily Snapshot" },
+    content: TEMPLATE_DAILY_SNAPSHOT,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/08/599f54de89ca6198.jpg", 
+    author: "underwood（@underwoodxie96）",
+    selections: {
+      "background_scene": { "zh-tw": "昏暗、平凡的房間，身後有一面素牆", en: "Dark, ordinary room with a plain wall behind the subject" },
+      "lighting": { "zh-tw": "隨意的肖像攝影，帶有日常快照氛圍", en: "Casual portrait photography with a daily snapshot vibe" },
+      "clothing": { "zh-tw": "略顯成熟的“大姐姐”時尚風格", en: "Slightly mature 'onee-san' fashion style" },
+      "accessory_glasses": { "zh-tw": "戴著有輕微鏡面反射的眼鏡", en: "wearing glasses with mild lens reflections" },
+      "action_status": { "zh-tw": "坐在沙發上，正隨意地玩著手機", en: "Sitting on a sofa, casually playing on her phone" },
+      "camera_angle": { "zh-tw": "上半身特寫", en: "upper-body close-up" },
+      "underwear_style": { "zh-tw": "“純欲風”服飾", en: "'pure-seductive' outfit style" },
+      "subject": { "zh-tw": "女性，約20歲", en: "Female, around 20 years old" },
+      "ratio": { "zh-tw": "3:4直式構圖", en: "3:4 Vertical" }
+    },
+    tags: ["人物", "攝影"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_surveillance_still",
+    name: { "zh-tw": "隱藏相機監控視角", en: "Surveillance Still" },
+    content: TEMPLATE_SURVEILLANCE_STILL,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/08/ff4ac4b4171f41f5.jpg", 
+    author: "@YaseenK7212",
+    selections: {
+      "character_originality": { "zh-tw": "年輕韓國女團偶像", en: "Young Korean female K-pop idol" },
+      "hair_style": { "zh-tw": "黑色直髮，垂在肩上", en: "Black straight hair, falling over shoulders" },
+      "action_status": { "zh-tw": "換衣時驚訝地抬頭直視鏡頭", en: "frozen in surprise, looking directly into the lens while changing" },
+      "clothing": { "zh-tw": "半脫的灰色大號連帽衫，露出白色吊帶", en: "half-removed oversized grey hoodie, revealing white camisole" },
+      "background_scene": { "zh-tw": "昏暗舒適的後臺更衣室或私密宿舍", en: "dimly lit, cozy backstage dressing room or private dorm room" },
+      "lighting": { "zh-tw": "隱藏相機拍攝風格，Portra 400 膠片質感", en: "Hidden camera style, Portra 400 film grain aesthetic" },
+      "camera_angle": { "zh-tw": "平視、略微隱藏的中景鏡頭", en: "eye-level, slightly hidden intimate medium shot" },
+      "ratio": { "zh-tw": "3:4直式構圖", en: "3:4 Vertical" }
+    },
+    tags: ["人物", "攝影", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_fine_art_garden",
+    name: { "zh-tw": "唯美花園藝術人像", en: "Fine-art Garden Portrait" },
+    content: TEMPLATE_FINE_ART_GARDEN,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/08/d325cd6ce1727205.jpg", 
+    author: "Taaruk(@Taaruk_)",
+    selections: {
+      "subject": { "zh-tw": "女性角色", en: "Female Character" },
+      "hair_style": { "zh-tw": "短髮，柔和凌亂的深色頭髮", en: "Short, softly tousled dark hair" },
+      "action_status": { "zh-tw": "溫柔地凝視著鏡頭，帶著淡淡的憂鬱", en: "Looking gently toward the camera, with a touch of melancholy" },
+      "clothing": { "zh-tw": "柔和青色復古碎花連衣裙", en: "Muted teal floral dress with subtle vintage patterns" },
+      "background_scene": { "zh-tw": "盛開的鬱鬱蔥蔥的花園", en: "Lush garden in full bloom" },
+      "flower_type": { "zh-tw": "白色和淡桃色花瓣在空中飄落", en: "White and pale peach flower petals drifting through the air" },
+      "camera_angle": { "zh-tw": "腰部以上的美術肖像", en: "Waist-up fine-art portrait" },
+      "lens_param": { "zh-tw": "85mm, f/1.8", en: "85mm, f/1.8" },
+      "lighting": { "zh-tw": "陰天下的柔和自然光", en: "Soft natural light under overcast sky" },
+      "role": { "zh-tw": "美術攝影與電影寫實風格", en: "Fine-art photography blended with cinematic realism" },
+      "ratio": { "zh-tw": "2:3直式構圖", en: "2:3 Vertical" }
+    },
+    tags: ["人物", "攝影", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_chinese_new_year_poster",
+    name: { "zh-tw": "中國新年時尚海報", en: "Chinese New Year Fashion Poster" },
+    content: TEMPLATE_CHINESE_NEW_YEAR_POSTER,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/09/83205df357ad8c1c.jpg",
+    author: "@tanshilong",
+    selections: {
+      "character_originality": { "zh-tw": "創作一個原創人物", en: "Create an original character" },
+      "character_heroic": { "zh-tw": "文藝青年", en: "Artistic Youth" },
+      "clothing_style_chinese": { "zh-tw": "古典紅色漢服", en: "Classical red Hanfu" },
+      "clothing_color_traditional": { "zh-tw": "暗紅色", en: "Dark Red" },
+      "ratio": { "zh-tw": "2:3直式構圖", en: "2:3 Vertical" }
+    },
+    tags: ["創意", "人物", "時尚", "節日"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_cute_dynamic_portrait",
+    name: { "zh-tw": "可愛動態人像", en: "Cute Dynamic Portrait" },
+    content: TEMPLATE_CUTE_DYNAMIC_PORTRAIT,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/10/9e64b198ccc9663a.jpg",
+    author: "M7(@mi7_crypto)",
+    selections: {
+      "room_style_cute": { "zh-tw": "可愛粉色房間，粉彩床和牆壁，原創動物玩偶，妖精燈光，可愛海報，絨毛地毯", en: "Cute pink room, pastel pink bed and walls, original cute animal plushies, fairy lights, cute posters, fluffy rug" },
+      "lens_type": { "zh-tw": "20mm 廣角鏡頭", en: "20mm wide-angle lens" },
+      "cute_pose_dynamic": { "zh-tw": "向前走時回望，從正上方自信俏皮地俯視，迷人微笑", en: "Walking forward while looking back, confidently and playfully looking down from directly above, charming smile" },
+      "cute_outfit": { "zh-tw": "黑色緊身吊帶連衣裙，長度到臀部，無袖，細肩帶", en: "Black tight camisole dress, hip-length, sleeveless, thin straps" },
+      "lighting": { "zh-tw": "溫暖的室內自然光，從窗射入，柔和的妖精燈在背景中", en: "Warm indoor natural light streaming through window, soft fairy lights in background" },
+      "camera_angle": { "zh-tw": "極低角度蟲視，床高度", en: "Extreme low-angle worm's-eye view, bed height" }
+    },
+    tags: ["人物", "攝影", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_fitness_selfie",
+    name: { "zh-tw": "健身自拍場景", en: "Fitness Selfie Scene" },
+    content: TEMPLATE_FITNESS_SELFIE,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/13/9413347206a80484.png",
+    author: "@tanshilong",
+    selections: {
+      "physical_state": { "zh-tw": "健康健美的身材", en: "Healthy athletic build" },
+      "fitness_pose": { "zh-tw": "半蹲姿勢，側身對鏡子", en: "Half-squat pose, turned sideways to mirror" },
+      "fitness_clothing": { "zh-tw": "運動裙，緊身貼身", en: "Sports skirt, tight and form-fitting" },
+      "sweat_appearance": { "zh-tw": "頭髮凌亂溼透，汗水明顯", en: "Hair disheveled and damp with sweat" },
+      "facial_expression": { "zh-tw": "臉頰泛紅，眼神迷離", en: "Cheeks flushed red, dreamy and slightly unfocused eyes" },
+      "fitness_location": { "zh-tw": "繁忙的健身房，鏡子和器械隨處可見", en: "Busy gym with mirrors and equipment visible" },
+      "selfie_style": { "zh-tw": "原始真實的鏡子自拍", en: "Raw, authentic mirror selfie" },
+      "photo_effect": { "zh-tw": "慢快門導致的運動模糊", en: "Motion blur from slow shutter speed" },
+      "ratio": { "zh-tw": "3:4直式構圖", en: "3:4 vertical portrait" }
+    },
+    tags: ["人物", "攝影", "卡通"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_miniature_model",
+    name: { "zh-tw": "微縮場景模型", en: "Miniature Scene Model" },
+    content: TEMPLATE_MINIATURE_MODEL,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/16/9dae0828037cbf5d.jpg",
+    author: "@aleenaamiir",
+    selections: {
+      "miniature_character": { "zh-tw": "消防員", en: "Firefighter" },
+      "giant_object": { "zh-tw": "燃燒的火柴棍", en: "Burning Matchstick" },
+      "ratio": { "zh-tw": "16:9橫式構圖", en: "16:9 horizontal landscape" }
+    },
+    tags: ["創意", "產品", "攝影"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_pop_mart_plush",
+    name: { "zh-tw": "馬年春節絨毛玩具", en: "Pop Mart Plush Toys" },
+    content: TEMPLATE_POP_MART_PLUSH,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/17/1e75e6702b92266c.jpg",
+    author: "兩斤 (@0x00_Krypt)",
+    selections: {
+      "plush_expression": { "zh-tw": "眨眼俏皮表情", en: "winking with playful expression" },
+      "cute_accessory": { "zh-tw": "針織帽", en: "beanie hats" },
+      "festive_archway": { "zh-tw": "中國傳統拱門", en: "traditional Chinese archway" }
+    },
+    tags: ["卡通", "創意", "節日"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_3d_isometric_diorama",
+    name: { "zh-tw": "3D等距透視展臺", en: "3D Isometric Diorama" },
+    content: TEMPLATE_3D_ISOMETRIC_DIORAMA,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/17/214fca0da3c13139.jpg",
+    author: "Aleena Amir (@aleenaamiir)",
+    selections: {
+      "exhibition_type": { "zh-tw": "現代藝術展覽", en: "modern art exhibition" },
+      "display_objects": { "zh-tw": "抽象雕塑和裝置藝術", en: "abstract sculptures and installation art" },
+      "pod_structure": { "zh-tw": "玻璃立方體展臺", en: "glass cube pod" }
+    },
+    tags: ["產品", "創意","建築"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_chinese_bridal_portrait",
+    name: { "zh-tw": "中式新娘肖像", en: "Chinese Bridal Portrait" },
+    content: TEMPLATE_CHINESE_BRIDAL_PORTRAIT,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/17/fa745814a2980164.jpg",
+    author: "ttmouse-豆爸 (@ttmouse)",
+    selections: {
+      "bridal_hair_decoration": { "zh-tw": "紅色紙剪花和蝴蝶裝飾", en: "red paper-cut flowers and butterflies" },
+      "traditional_bridal_attire": { "zh-tw": "紅色緞面旗袍", en: "red satin cheongsam" },
+      "bridal_jewelry": { "zh-tw": "白色珍珠首飾和小珍珠耳環", en: "white pearl jewelry and small pearl earrings" }
+    },
+    tags: ["人物", "攝影", "節日"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_premium_food_advertising",
+    name: { "zh-tw": "高端食品廣告", en: "Premium Food Advertising" },
+    content: TEMPLATE_PREMIUM_FOOD_ADVERTISING,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/17/416c81356ded66d4.jpg",
+    author: "Amira Zairi (@azed_ai)",
+    selections: {
+      "premium_food_subject": { "zh-tw": "手工巧克力球", en: "handcrafted chocolate truffles" },
+      "ingredient_bits": { "zh-tw": "可可粉和金箔碎屑", en: "cocoa powder and gold flakes" }
+    },
+    tags: ["產品", "攝影"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_forbidden_city_phoenix",
+    name: { "zh-tw": "紫禁城雪夜鳳凰", en: "Forbidden City Snow Night Phoenix" },
+    content: TEMPLATE_FORBIDDEN_CITY_PHOENIX,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/17/3665163b0de1bf93.jpg",
+    author: "Sidona (@sidona)",
+    selections: {
+      "imperial_palace_scene": { "zh-tw": "紫禁城雪夜，飛雪飄零", en: "Forbidden City snow night with falling snowflakes" },
+      "phoenix_crown": { "zh-tw": "華麗繁複的金鳳冠", en: "ornate golden phoenix crown" },
+      "flowing_garment": { "zh-tw": "流動的紅橙色絲綢華服", en: "flowing red-orange silk robes" },
+      "festive_props": { "zh-tw": "口中叼著中式紅包，手中拿著展開的春節祝福", en: "holding red envelope in mouth and unfolded spring festival blessing in hand" }
+    },
+    tags: ["人物", "攝影", "節日", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_interior_rendering",
+    name: { "zh-tw": "室內設計真實渲染", en: "Interior Design Rendering" },
+    content: TEMPLATE_INTERIOR_RENDERING,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/18/df7ed03d64db5339.jpg",
+    author: "tanshilong",
+    selections: {
+      "room_type": { "zh-tw": "客廳", en: "Living Room" },
+      "interior_design_style": { "zh-tw": "現代輕奢風格", en: "Modern Light Luxury Style" },
+      "furniture_set": { "zh-tw": "沙發、地毯、茶几、電視", en: "Sofa, rug, coffee table, TV" },
+      "ceiling_material": { "zh-tw": "白色乳膠漆平頂", en: "White latex flat ceiling" },
+      "wall_material": { "zh-tw": "白色乳膠漆牆面", en: "White latex paint wall" },
+      "floor_material": { "zh-tw": "淺灰色大理石地磚", en: "Light gray marble tile" },
+      "interior_lighting": { "zh-tw": "自然光線", en: "Natural lighting" },
+      "render_quality": { "zh-tw": "4K超高清分辨率", en: "4K Ultra HD resolution" }
+    },
+    tags: ["建築", "創意"],
+    language: ["zh-tw", "en"]
+  },
+  {
+    id: "tpl_isometric_interior_scene",
+    name: { "zh-tw": "等距視角室內場景", en: "Isometric Interior Scene" },
+    content: TEMPLATE_ISOMETRIC_INTERIOR_SCENE,
+    imageUrl: "https://s3.bmp.ovh/imgs/2026/01/19/b04fd355944cfb21.jpg",
+    author: "@tanshilong",
+    selections: {
+      "room_type": { "zh-tw": "客廳", en: "Living Room" },
+      "room_condition": { "zh-tw": "精緻裝修，高檔材料的質感與細節", en: "Exquisitely decorated, high-end materials with refined details" },
+      "interior_design_style": { "zh-tw": "現代簡約風格", en: "Modern Minimalist Style" },
+      "floor_material": { "zh-tw": "淺灰色巖板地面", en: "Light gray sintered stone floor" },
+      "wall_material": { "zh-tw": "暖白色牆面與裝飾畫", en: "Warm white walls with decorative art" }
+    },
+    tags: ["建築", "創意"],
     language: ["zh-tw", "en"]
   }
 ];
